@@ -115,10 +115,10 @@ main .carrosel button {
   cursor: pointer;
 }
 main .carrosel button.backButton {
-  left: 10px;
+  left: 100px;
 }
 main .carrosel button.nextButton {
-  right: 10px;
+  right: 100px;
 }
 
 .promocao {
