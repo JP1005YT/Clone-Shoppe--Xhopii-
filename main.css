@@ -32,6 +32,11 @@ header .logo h1 {
 header .logo img {
   height: 60px;
 }
+header .out-button a {
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+}
 
 .navbar {
   display: flex;
