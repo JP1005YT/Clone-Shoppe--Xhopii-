@@ -1,0 +1,147 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+  font-weight: 100;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #f5f5f5;
+  color: #fb5630;
+  height: 70px;
+  padding: 20px;
+}
+header > * {
+  width: 33;
+}
+header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .logo h1 {
+  display: flex;
+  align-items: end;
+  height: 60px;
+}
+header .logo img {
+  height: 60px;
+}
+header .out-button a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #fb5630;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 70px);
+  background: #fff;
+}
+main form {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  background: #f5f5f5;
+  height: 60%;
+  padding: 20px;
+  border-radius: 5px;
+}
+main form .backButton {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 35px;
+  margin: 20px;
+}
+main form input {
+  font-size: 25px;
+  width: 90%;
+  padding: 20px;
+}
+main form input#confirmButton {
+  color: #f5f5f5;
+  background: #fb5630;
+}
+
+footer {
+  background: #f5f5f5;
+}
+footer > section {
+  width: 80%;
+  margin-left: 10%;
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer > section .imagens section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 30px;
+}
+footer > section .qr-code .image-qr {
+  width: 150px;
+  height: 150px;
+  margin: 20px 0 20px 0;
+}
+footer > section .qr-code img {
+  margin: 20px 0 20px 0;
+  width: 150px;
+  height: 50px;
+}
+footer > section nav {
+  width: 20%;
+  padding: 10px;
+  margin: 10px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 150px;
+}
+footer > section nav h2 {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 20px 0 20px 0;
+}
+footer > section nav a, footer > section nav div {
+  text-decoration: none;
+  color: #636474;
+  margin: 10px 0 10px 0;
+}
+footer > section nav img {
+  height: 30px;
+}
+footer > div {
+  text-align: center;
+  width: 100%;
+  padding: 30px;
+}
+footer .copyright {
+  padding: 0;
+  width: 80%;
+  margin-left: 10%;
+}
+footer .copyright div {
+  padding: 20px;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../../font/Roboto/Roboto-Regular.ttf");
+  /* Adicione outros formatos de fonte aqui, se necessário */
+}/*# sourceMappingURL=main.css.map */

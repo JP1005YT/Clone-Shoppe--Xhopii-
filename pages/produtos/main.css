@@ -1,0 +1,202 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+  font-weight: 100;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fb5630;
+  height: 70px;
+  padding: 20px;
+  color: #ffffff;
+}
+header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .logo h1 {
+  display: flex;
+  align-items: end;
+  height: 60px;
+}
+header .logo img {
+  height: 60px;
+}
+header .out-button a {
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: #fb7730;
+}
+.navbar ul {
+  color: #ffffff;
+  list-style: none;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+.navbar ul li {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12%;
+  padding: 15px;
+}
+.navbar ul li:hover {
+  background: #fb5630;
+}
+
+footer {
+  background: #f5f5f5;
+}
+footer > section {
+  width: 80%;
+  margin-left: 10%;
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer > section .imagens section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 30px;
+}
+footer > section .qr-code .image-qr {
+  width: 150px;
+  height: 150px;
+  margin: 20px 0 20px 0;
+}
+footer > section .qr-code img {
+  margin: 20px 0 20px 0;
+  width: 150px;
+  height: 50px;
+}
+footer > section nav {
+  width: 20%;
+  padding: 10px;
+  margin: 10px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 150px;
+}
+footer > section nav h2 {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 20px 0 20px 0;
+}
+footer > section nav a, footer > section nav div {
+  text-decoration: none;
+  color: #636474;
+  margin: 10px 0 10px 0;
+}
+footer > section nav img {
+  height: 30px;
+}
+footer > div {
+  text-align: center;
+  width: 100%;
+  padding: 30px;
+}
+footer .copyright {
+  padding: 0;
+  width: 80%;
+  margin-left: 10%;
+}
+footer .copyright div {
+  padding: 20px;
+}
+
+.produtos {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 0px;
+  background: #fff;
+}
+.produtos .title {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  color: #fb7730;
+}
+.produtos .title h2 {
+  padding: 40px;
+}
+.produtos .content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px 30px;
+  margin: 20px 0 20px 0;
+}
+.produtos .content div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.173);
+}
+.produtos .content div:hover {
+  border: 2px solid #fb5630;
+}
+.produtos .content div .desc {
+  text-align: start;
+  padding: 20px 0 50px 0;
+}
+.produtos .content div .price {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 10px;
+  color: #fb5630;
+}
+.produtos .content div .storage {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+  color: #cdc9cc;
+}
+.produtos .content div .fabricante {
+  color: #cdc9cc;
+}
+.produtos .content div .fabricante strong {
+  color: #636474;
+}
+.produtos .content div .desc {
+  margin: 0 25px 0 25px;
+  color: #cdc9cc;
+}
+.produtos .content div .desc strong {
+  color: #636474;
+}
+.produtos .content div img {
+  height: 200px;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../../font/Roboto/Roboto-Regular.ttf");
+  /* Adicione outros formatos de fonte aqui, se necessário */
+}/*# sourceMappingURL=main.css.map */
