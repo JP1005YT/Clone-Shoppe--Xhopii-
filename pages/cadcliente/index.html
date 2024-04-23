@@ -3,9 +3,10 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Xhopii | Redefinir Senha</title>
+    <title>Xhoppi | Cadastro de Produto</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="shortcut icon" href="../../img/logo.png"/>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -14,17 +15,40 @@
             <img src="../../img/logo.png" height="50px">
             <h1>Xhopii</h1>
         </div>
-        <h1>Redefinir Senha</h1>
         <div class="out-button">
-            <a href="#">Precisa de ajuda?</a>
+            <a href="../../pages/login/">Sair</a>
         </div>
     </header>
+    <nav class="navbar">
+        <ul>
+            <li>Home</li>
+            <li>Cadastro Cliente</li>
+            <li>Cadastro Funcionário</li>
+            <li>Cadastro Produto</li>
+            <li>Ver Clientes</li>
+            <li>Ver Funcionários</li>
+            <li>Ver Produtos</li>
+        </ul>
+    </nav>
     <main>
         <form>
-            <span class="backButton"><</span>
-            <h2>Redefinir senha</h2>
-            <input placeholder="Email">
-            <input value="Enviar" type="submit" id="confirmButton">
+            <h2>Cadastrar Cliente</h2>
+            <input placeholder="Nome" type="text">
+            <input placeholder="Sobrenome" type="text">
+            <input placeholder="CPF" type="text">
+            <input type="date">
+            <input placeholder="Telefone" type="tel">
+            <input placeholder="Email" type="email">
+            <input placeholder="Senha" type="password">
+            <section class="photo">
+                <h3>Selecionar foto do cliente:</h3>
+                <section>
+                    <label for="file-upload" id="button">Escolher arquivo</label>
+                    <!-- <input type="file" id="file-upload"> -->
+                    <label>Nenhum arquivo escolhido</label>
+                </section>
+            </section>
+            <input value="CADASTRAR" type="submit" id="cadastar">
         </form>
     </main>
     <footer>
@@ -97,5 +121,6 @@
             <div>&copy 2023 Xhoppi. Todos Direitos Acadêmicos Reservados</div>
         </div>
     </footer>
+    <script src='main.js'></script>
 </body>
 </html>

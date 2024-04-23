@@ -1,0 +1,189 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+  font-weight: 100;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fb5630;
+  height: 70px;
+  padding: 20px;
+  color: #ffffff;
+}
+header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .logo h1 {
+  display: flex;
+  align-items: end;
+  height: 60px;
+}
+header .logo img {
+  height: 60px;
+}
+header .out-button a {
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: #fb7730;
+}
+.navbar ul {
+  color: #ffffff;
+  list-style: none;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+.navbar ul li {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12%;
+  padding: 15px;
+}
+.navbar ul li:hover {
+  background: #fb5630;
+}
+
+footer {
+  background: #f5f5f5;
+}
+footer > section {
+  width: 80%;
+  margin-left: 10%;
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer > section .imagens section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 30px;
+}
+footer > section .qr-code .image-qr {
+  width: 150px;
+  height: 150px;
+  margin: 20px 0 20px 0;
+}
+footer > section .qr-code img {
+  margin: 20px 0 20px 0;
+  width: 150px;
+  height: 50px;
+}
+footer > section nav {
+  width: 20%;
+  padding: 10px;
+  margin: 10px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 150px;
+}
+footer > section nav h2 {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 20px 0 20px 0;
+}
+footer > section nav a, footer > section nav div {
+  text-decoration: none;
+  color: #636474;
+  margin: 10px 0 10px 0;
+}
+footer > section nav img {
+  height: 30px;
+}
+footer > div {
+  text-align: center;
+  width: 100%;
+  padding: 30px;
+}
+footer .copyright {
+  padding: 0;
+  width: 80%;
+  margin-left: 10%;
+}
+footer .copyright div {
+  padding: 20px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(150vh - 120px);
+  background: #cdc9cc;
+}
+main form {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  height: 90%;
+  background: #fff;
+  padding: 20px;
+}
+main form h2, main form h3 {
+  font-weight: bold;
+  color: #fb5630;
+}
+main form .photo {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main form .photo h3 {
+  margin: 20px;
+}
+main form .photo section {
+  padding: 20px;
+}
+main form .photo section label {
+  margin: 20px;
+}
+main form .photo #button {
+  padding: 15px;
+  border-radius: 10px;
+  background: #fff;
+  color: #fb5630;
+  border: 2px solid #fb5630;
+}
+main form input, main form select {
+  width: 70%;
+  padding: 20px;
+  margin: 10px;
+}
+main form #cadastar {
+  cursor: pointer;
+  background: #fb5630;
+  border: none;
+  color: #fff;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../../font/Roboto/Roboto-Regular.ttf");
+  /* Adicione outros formatos de fonte aqui, se necessário */
+}/*# sourceMappingURL=main.css.map */
