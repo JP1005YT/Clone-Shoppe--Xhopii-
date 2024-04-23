@@ -1,0 +1,194 @@
+$corSecundario : #fb7730;
+$corPrincipal : #fb5630;
+$corCinzClaro : #cdc9cc;
+$corCinza : #636474;
+$brancoDiferente : #f5f5f5;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+    font-weight: 100;
+    user-select: none;
+    // object-fit: cover;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $corPrincipal;
+    height: 70px;
+    padding: 20px;
+    color: #ffffff;
+    .logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1{
+            display: flex;
+            align-items: end;
+            height: 60px;
+        }
+        img{
+            height: 60px;
+        }
+    }
+    .out-button a{
+        cursor: pointer;
+        color: #fff;
+        text-decoration: none;
+    }
+}
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: $corSecundario;
+    ul{
+        color: #ffffff;
+        list-style: none;
+        width: 80%;        
+        display: flex;
+        justify-content: space-around;
+        li{
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 12%;
+            padding: 15px;
+            &:hover{
+                background: $corPrincipal;
+            }
+        }
+    }
+}
+footer{
+    background: $brancoDiferente;
+    & > section{
+        width: 80%;
+        margin-left: 10%;
+        padding-top: 50px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .imagens{
+            section{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px 30px;
+            }
+        }
+        .qr-code{
+            .image-qr{
+                width: 150px;
+                height: 150px;
+                margin: 20px 0 20px 0;
+            }
+            img{
+                margin: 20px 0 20px 0;
+                width: 150px;
+                height: 50px;
+            }
+        }
+        nav{
+            width: 20%;
+            padding: 10px;
+            margin: 10px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 150px;
+            h2{
+                font-weight: bold;
+                font-size: 20px;
+                padding: 20px 0 20px 0;
+            }
+            a,div{
+                text-decoration: none;
+                color: $corCinza;
+                margin: 10px 0 10px 0;
+            }
+            img{
+                height: 30px;
+            }
+        }
+    }
+    &>div{
+        text-align: center;
+        width: 100%;
+        padding: 30px;
+    }
+    .copyright{
+        padding: 0;
+        width: 80%;
+        margin-left: 10%;
+        div{
+            padding: 20px;
+        }
+    }
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 120px);
+    background: $corCinzClaro;
+    form{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        width: 50%;
+        height: 90%;
+        background:#fff;
+        padding: 20px;
+        h2,h3{
+            font-weight: bold;
+            color: $corPrincipal;
+        }
+        .photo{
+            width: 60%;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 30px;
+            h3{
+                margin: 20px
+            }
+            section{
+                padding: 20px;
+                label{
+                    margin: 20px;
+                }
+            }
+            #button{
+                padding: 15px;
+                border-radius: 10px;
+                background: #fff;
+                color: $corPrincipal;
+                border: 2px solid $corPrincipal;
+            }
+        }
+        input{
+            width: 70%;
+            padding: 20px;
+            margin: 10px;
+            // font-size: 20px;
+        }
+        #cadastar{
+            cursor: pointer;
+            background: $corPrincipal;
+            border: none;
+            color: #fff;
+        }
+    }
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../font/Roboto/Roboto-Regular.ttf');
+    /* Adicione outros formatos de fonte aqui, se necessário */
+}
