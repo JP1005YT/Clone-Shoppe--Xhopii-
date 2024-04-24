@@ -27,7 +27,7 @@
             <input placeholder="Senha">
             <input value="ENTRE" type="submit" id="confirmButton">
             <section class="separation1">
-                <span>Esqueci minha senha</span>
+                <span onclick="toPage()">Esqueci minha senha</span>
                 <span>Fazer login com SMS</span>
             </section>
             <section class="separation2">
@@ -127,6 +127,9 @@
             e.preventDefault()
             window.location.href = '../../'
         })
+        function toPage(){
+            window.location.href = '../redefinirsenha/'
+        }
     </script>
 </body>
 </html>

@@ -187,5 +187,13 @@
             <div>&copy 2023 Xhoppi. Todos Direitos Acadêmicos Reservados</div>
         </div>
     </footer>
+    <script>
+        const Divs = document.querySelectorAll(".content div")
+        Divs.forEach(prod => {
+            prod.addEventListener("click",()=>{
+                window.location.href = "../produto/"
+            })
+        })
+    </script>
 </body>
 </html>

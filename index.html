@@ -217,6 +217,12 @@
                 element.classList.add("ativo")
             })
         }
+        const Divs = document.querySelectorAll(".content div")
+        Divs.forEach(prod => {
+            prod.addEventListener("click",()=>{
+                window.location.href = "/pages/produto/"
+            })
+        })
     </script>
 </body>
 </html>
