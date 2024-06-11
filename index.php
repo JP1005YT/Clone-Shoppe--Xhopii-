@@ -1,5 +1,7 @@
+<?php
+    header('Location:../../../pages/login/index.html');
+?>
 <!DOCTYPE html>
-<html>
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -21,13 +23,13 @@
     </header>
     <nav class="navbar">
         <ul>
-            <li>Home</li>
-            <li>Cadastro Cliente</li>
-            <li>Cadastro Funcionário</li>
-            <li>Cadastro Produto</li>
-            <li>Ver Clientes</li>
-            <li>Ver Funcionários</li>
-            <li>Ver Produtos</li>
+            <li> <a href="index.php"> Home </a></li>
+            <li> <a href="../pages/cadcliente/index.html"> Cadastro Cliente </a> </li>
+            <li> <a href="../pages/cadfuncionario/index.html"> Cadastro Funcionário </a> </li>
+            <li> <a href="../pages/cadproduto/index.html"> Cadastro Produto </a> </li>
+            <li> <a href="../pages/cliente/index.html"> Ver Clientes </a> </li>
+            <li> <a href="../pages/funcionarios/index.html"> Ver Funcionários </a> </li>
+            <li> <a href="../pages/produtos/index.html"> Ver Produtos </a> </li>
         </ul>
     </nav>
     <main>
@@ -36,8 +38,8 @@
             <img src="img/carousel-2.jpg" id="img1">
             <img src="img/carousel-3.jpg" id="img2">
             <img src="img/carousel-4.jpg" id="img3">
-            <button class="backButton"><</button>
-            <button class="nextButton">></button>
+            <button class="backButton"> < </button>
+            <button class="nextButton"> > </button>
             <nav>
                 <ul>
                     <li id="img0"></li>

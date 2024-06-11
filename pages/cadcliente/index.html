@@ -31,24 +31,24 @@
         </ul>
     </nav>
     <main>
-        <form>
+        <form method="POST" action="../../processamento/processamento.php">
             <h2>Cadastrar Cliente</h2>
-            <input placeholder="Nome" type="text">
-            <input placeholder="Sobrenome" type="text">
-            <input placeholder="CPF" type="text">
-            <input type="date">
-            <input placeholder="Telefone" type="tel">
-            <input placeholder="Email" type="email">
-            <input placeholder="Senha" type="password">
-            <section class="photo">
+                <input type="text" placeholder="Nome" name="inputNome">
+                <input type="text" placeholder="Sobrenome" name="inputSobrenome">
+                <input type="text" placeholder="CPF" name="inputCPF">
+                <input type="date" placeholder="Data Nascimento" name="inputDataNasc">
+                <input type="text" placeholder="Telefone" name="inputTelefone">
+                <input type="text" placeholder="Email" name="inputEmail">
+                <input type="password" placeholder="Senha" name="inputSenha">
+            <!-- <section class="photo">
                 <h3>Selecionar foto do cliente:</h3>
                 <section>
                     <label for="file-upload" id="button">Escolher arquivo</label>
-                    <!-- <input type="file" id="file-upload"> -->
+                    <input type="file" id="file-upload">
                     <label>Nenhum arquivo escolhido</label>
                 </section>
-            </section>
-            <input value="CADASTRAR" type="submit" id="cadastar">
+            </section> -->
+            <input value="Cadastrar" type="submit" id="cadastar">
         </form>
     </main>
     <footer>

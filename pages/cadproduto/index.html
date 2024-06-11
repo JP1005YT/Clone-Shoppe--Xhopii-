@@ -31,21 +31,21 @@
         </ul>
     </nav>
     <main>
-        <form>
-            <h2>Cadastrar Produto</h2>
-            <input placeholder="Nome" type="text">
-            <input placeholder="Fabricante" type="text">
-            <input placeholder="Descrição" type="text">
-            <input placeholder="Valor" type="number">
-            <input placeholder="Quantidade" type="number">
-            <section class="photo">
+            <form method="POST" action="../../processamento/processamento.php">
+                <h2>Cadastrar Produto</h2>
+                    <input type="text" placeholder="Nome" name="inputNome">
+                    <input type="text" placeholder="Fabricante" name="inputFabricante">
+                    <input type="text" placeholder="Descrição" name="inputDescricao">
+                    <input type="number" placeholder="Valor" name="inputValor">
+                    <input type="number" placeholder="Quantidade" name="inputQuantidade">
+            <!-- <section class="photo">
                 <h3>Selecionar foto do produto:</h3>
                 <section>
                     <label for="file-upload" id="button">Escolher arquivo</label>
-                    <!-- <input type="file" id="file-upload"> -->
+                    <input type="file" id="file-upload">
                     <label>Nenhum arquivo escolhido</label>
                 </section>
-            </section>
+            </section> -->
             <input value="CADASTRAR" type="submit" id="cadastar">
         </form>
     </main>
