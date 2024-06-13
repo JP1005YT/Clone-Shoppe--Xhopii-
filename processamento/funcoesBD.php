@@ -21,6 +21,19 @@ function retornarCliente(){
     return($listaClientes);
 }
 
+function loginCliente($email, $senha){
+    $conexao = conectarBD();
+    $consulta = "SELECT * FROM cliente WHERE email = '$email'";
+    $resultado = mysqli_query($conexao, $consulta);
+    if($resultado && mysqli_num_rows($resultado) > 0){
+        $cliente = mysqli_fetch_assoc($resultado);
+        if(password_verify($senha, $cliente['senha'])){
+            return $cliente;
+        }
+    }
+    return false;
+}
+
 //produto
 function inserirProduto($nome, $fabricante, $descricao, $valor, $quantidade){
 
@@ -36,5 +49,22 @@ function retornarProduto(){
     $consulta = "SELECT * FROM produto";
     $listaProduto = mysqli_query($conexao, $consulta);
     return($listaProduto);
+}
+
+//funcionario
+function inserirFuncionario($nome, $sobrenome, $cpf, $dataNasc, $telefone,$cargo,$salario,$email,$senha){
+
+    $conexao = conectarBD();
+    $consulta = "INSERT INTO funcionario (nome, sobrenome, cpf, dataDeNascimento, telefone, cargo, salario, email, senha) VALUES 
+    ('$nome','$sobrenome','$cpf','$dataNasc','$telefone','$cargo','$salario','$email','$senha')";
+
+    mysqli_query($conexao, $consulta);
+}
+
+function retornarFuncionario(){
+    $conexao = conectarBD();
+    $consulta = "SELECT * FROM funcionario";
+    $listaFuncionario = mysqli_query($conexao, $consulta);
+    return($listaFuncionario);
 }
 ?>

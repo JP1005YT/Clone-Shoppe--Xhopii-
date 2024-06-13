@@ -1,5 +1,5 @@
 <?php
-    header('Location:../../../pages/login/index.html');
+    header('Location: ./pages/login/index.php');
 ?>
 <!DOCTYPE html>
 <head>
