@@ -21,18 +21,25 @@
     </header>
     <nav class="navbar">
         <ul>
-            <li>Home</li>
-            <li>Cadastro Cliente</li>
-            <li>Cadastro Funcionário</li>
-            <li>Cadastro Produto</li>
-            <li>Ver Clientes</li>
-            <li>Ver Funcionários</li>
-            <li>Ver Produtos</li>
+            <li> <a href="index.php"> Home </a></li>
+            <li> <a href="./pages/cadcliente/index.html"> Cadastro Cliente </a> </li>
+            <li> <a href="./pages/cadfuncionario/index.html"> Cadastro Funcionário </a> </li>
+            <li> <a href="./pages/cadproduto/index.html"> Cadastro Produto </a> </li>
+            <li> <a href="./pages/cliente/index.html"> Ver Clientes </a> </li>
+            <li> <a href="./pages/funcionarios/index.html"> Ver Funcionários </a> </li>
+            <li> <a href="./pages/produtos/index.html"> Ver Produtos </a> </li>
         </ul>
     </nav>
     <main>
         <form method="POST" action="../../processamento/processamento.php">
             <h2>Cadastrar Cliente</h2>
+                <?php
+                    session_start();
+                    if (isset($_SESSION['erro'])) {
+                        echo '<p class="error">' . $_SESSION['erro'] . '</p>';
+                        unset($_SESSION['erro']);
+                    }
+                ?>
                 <input type="text" placeholder="Nome" name="inputNome">
                 <input type="text" placeholder="Sobrenome" name="inputSobrenome">
                 <input type="text" placeholder="CPF" name="inputCPF">
@@ -118,7 +125,7 @@
         </section>
         <div class="copyright">
             <hr>
-            <div>&copy 2023 Xhoppi. Todos Direitos Acadêmicos Reservados</div>
+            <div>&copy 2024 Xhoppi. Todos Direitos Acadêmicos Reservados</div>
         </div>
     </footer>
     <script src='main.js'></script>

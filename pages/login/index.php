@@ -1,10 +1,10 @@
-<?php
+<!-- <?php
    session_start();
    if (!isset($_SESSION['cliente'])) {
        header('Location: ../pages/login/index.html');
        exit;
    }
-?>
+?> -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,7 +34,7 @@
             <input placeholder="Senha" type="password">
             <input value="ENTRE" type="submit" id="confirmButton">
             <section class="separation1">
-                <span onclick="toPage()">Esqueci minha senha</span>
+                <span onclick="toPage(pages/redefinirSenha/index.html)">Esqueci minha senha</span>
                 <span>Fazer login com SMS</span>
             </section>
             <section class="separation2">

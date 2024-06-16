@@ -1,6 +1,3 @@
-<?php
-    // header('Location: ./pages/login/index.php');
-?>
 <!DOCTYPE html>
 <head>
     <meta charset='utf-8'>
@@ -18,16 +15,16 @@
             <h1>Xhopii</h1>
         </div>
         <div class="out-button">
-            <a href="./pages/login/">Sair</a>
+            <a href="./pages/login/index.php">Sair</a>
         </div>
     </header>
     <nav class="navbar">
         <ul>
             <li> <a href="index.php"> Home </a></li>
-            <li> <a href="./pages/cadcliente/index.html"> Cadastro Cliente </a> </li>
+            <li> <a href="./pages/cadcliente/index.php"> Cadastro Cliente </a> </li>
             <li> <a href="./pages/cadfuncionario/index.html"> Cadastro Funcionário </a> </li>
             <li> <a href="./pages/cadproduto/index.html"> Cadastro Produto </a> </li>
-            <li> <a href="./pages/cliente/index.html"> Ver Clientes </a> </li>
+            <li> <a href="./pages/cliente/index.php"> Ver Clientes </a> </li>
             <li> <a href="./pages/funcionarios/index.html"> Ver Funcionários </a> </li>
             <li> <a href="./pages/produtos/index.html"> Ver Produtos </a> </li>
         </ul>
@@ -187,7 +184,7 @@
         </section>
         <div class="copyright">
             <hr>
-            <div>&copy 2023 Xhoppi. Todos Direitos Acadêmicos Reservados</div>
+            <div>&copy 2024 Xhoppi. Todos Direitos Acadêmicos Reservados</div>
         </div>
     </footer>
     <script>
