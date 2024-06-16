@@ -21,13 +21,13 @@
     </header>
     <nav class="navbar">
         <ul>
-            <li> <a href="index.php"> Home </a></li>
-            <li> <a href="./pages/cadcliente/index.html"> Cadastro Cliente </a> </li>
-            <li> <a href="./pages/cadfuncionario/index.html"> Cadastro Funcionário </a> </li>
-            <li> <a href="./pages/cadproduto/index.html"> Cadastro Produto </a> </li>
-            <li> <a href="./pages/cliente/index.html"> Ver Clientes </a> </li>
-            <li> <a href="./pages/funcionarios/index.html"> Ver Funcionários </a> </li>
-            <li> <a href="./pages/produtos/index.html"> Ver Produtos </a> </li>
+            <li> <a href="./../../index.php"> Home </a></li>
+            <li> <a href="./../../pages/cadcliente/"> Cadastro Cliente </a> </li>
+            <li> <a href="./../../pages/cadfuncionario/"> Cadastro Funcionário </a> </li>
+            <li> <a href="./../../pages/cadproduto/"> Cadastro Produto </a> </li>
+            <li> <a href="./../../pages/cliente/"> Ver Clientes </a> </li>
+            <li> <a href="./../../pages/funcionarios/"> Ver Funcionários </a> </li>
+            <li> <a href="./../../pages/produtos/"> Ver Produtos </a> </li>
         </ul>
     </nav>
     <main>

@@ -1,9 +1,9 @@
 <!-- <?php
    session_start();
-   if (!isset($_SESSION['cliente'])) {
-       header('Location: ../pages/login/index.html');
-       exit;
-   }
+//    if (!isset($_SESSION['cliente'])) {
+//        header('Location: ../pages/login/index.html');
+//        exit;
+//    }
 ?> -->
 <!DOCTYPE html>
 <html>

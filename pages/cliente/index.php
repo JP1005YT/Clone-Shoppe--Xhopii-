@@ -11,8 +11,8 @@ $clientes = retornarCliente();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Xhoppi | Ver Clientes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
     <link rel="shortcut icon" href="../../img/logo.png"/>
+    <link rel="stylesheet" href="main.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <style>
         table {
@@ -43,13 +43,13 @@ $clientes = retornarCliente();
     </header>
     <nav class="navbar">
         <ul>
-            <li><a href="index.php">Home</a></li>
-            <li><a href="./pages/cadcliente/index.php">Cadastro Cliente</a></li>
-            <li><a href="./pages/cadfuncionario/index.php">Cadastro Funcionário</a></li>
-            <li><a href="./pages/cadproduto/index.php">Cadastro Produto</a></li>
-            <li><a href="./pages/cliente/index.php">Ver Clientes</a></li>
-            <li><a href="./pages/funcionarios/index.php">Ver Funcionários</a></li>
-            <li><a href="./pages/produtos/index.php">Ver Produtos</a></li>
+            <li> <a href="./../../index.php"> Home </a></li>
+            <li> <a href="./../../pages/cadcliente/"> Cadastro Cliente </a> </li>
+            <li> <a href="./../../pages/cadfuncionario/"> Cadastro Funcionário </a> </li>
+            <li> <a href="./../../pages/cadproduto/"> Cadastro Produto </a> </li>
+            <li> <a href="./../../pages/cliente/"> Ver Clientes </a> </li>
+            <li> <a href="./../../pages/funcionarios/"> Ver Funcionários </a> </li>
+            <li> <a href="./../../pages/produtos/"> Ver Produtos </a> </li>
         </ul>
     </nav>
     <main>
