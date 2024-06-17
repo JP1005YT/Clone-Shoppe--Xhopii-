@@ -3,7 +3,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Xhoppi | Cadastro de Produto</title>
+    <title>Xhoppi | Cadastro de Cliente</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <link rel="shortcut icon" href="../../img/logo.png"/>
@@ -31,7 +31,7 @@
         </ul>
     </nav>
     <main>
-        <form method="POST" action="../../processamento/processamento.php">
+        <form method="POST" action="../../processamento/processamento_cliente.php">
             <h2>Cadastrar Cliente</h2>
                 <?php
                     session_start();
@@ -47,14 +47,14 @@
                 <input type="text" placeholder="Telefone" name="inputTelefone">
                 <input type="text" placeholder="Email" name="inputEmail">
                 <input type="password" placeholder="Senha" name="inputSenha">
-            <!-- <section class="photo">
+            <section class="photo">
                 <h3>Selecionar foto do cliente:</h3>
                 <section>
                     <label for="file-upload" id="button">Escolher arquivo</label>
                     <input type="file" id="file-upload">
                     <label>Nenhum arquivo escolhido</label>
                 </section>
-            </section> -->
+            </section>
             <input value="Cadastrar" type="submit" id="cadastar">
         </form>
     </main>

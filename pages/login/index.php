@@ -1,10 +1,3 @@
-<!-- <?php
-   session_start();
-//    if (!isset($_SESSION['cliente'])) {
-//        header('Location: ../pages/login/index.html');
-//        exit;
-//    }
-?> -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,6 +15,13 @@
             <img src="../../img/logo.png" height="50px">
             <h1>Xhopii</h1>
         </div>
+        <?php session_start(); ?>
+        <?php if (isset($_SESSION['mensagem'])): ?>
+            <div class="mensagem">
+                <?php echo $_SESSION['mensagem']; ?>
+            </div>
+            <?php unset($_SESSION['mensagem']); ?>
+        <?php endif; ?>
         <h1>Entre</h1>
         <div class="out-button">
             <a href="#">Precisa de ajuda?</a>
@@ -30,11 +30,11 @@
     <main>
         <form method="POST" action="../../processamento/processamento.php">
             <h2>Login</h2>
-            <input placeholder="Email">
-            <input placeholder="Senha" type="password">
+            <input type="text" placeholder="Email" name="inputEmail">
+            <input type="password" placeholder="Senha" name="inputSenha">
             <input value="ENTRE" type="submit" id="confirmButton">
             <section class="separation1">
-                <span onclick="toPage(pages/redefinirSenha/index.html)">Esqueci minha senha</span>
+                <span onclick="toPage('pages/redefinirSenha/index.html')">Esqueci minha senha</span>
                 <span>Fazer login com SMS</span>
             </section>
             <section class="separation2">
@@ -125,17 +125,12 @@
         </section>
         <div class="copyright">
             <hr>
-            <div>&copy 2023 Xhoppi. Todos Direitos Acadêmicos Reservados</div>
+            <div>&copy 2024 Xhoppi. Todos Direitos Acadêmicos Reservados</div>
         </div>
     </footer>
     <script>
-        const confirmButton = document.querySelector("#confirmButton")
-        confirmButton.addEventListener("click",(e) => {
-            e.preventDefault()
-            window.location.href = '../../'
-        })
-        function toPage(){
-            window.location.href = '../redefinirsenha/'
+        function toPage(page){
+            window.location.href = page;
         }
     </script>
 </body>

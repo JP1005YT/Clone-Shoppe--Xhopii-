@@ -31,29 +31,21 @@
         </ul>
     </nav>
     <main>
-            <form method="POST" action="../../processamento/processamento.php">
-                <h2>Cadastrar Funcionario</h2>
+            <form method="POST" action="../../processamento/processamento_produto.php">
+                <h2>Cadastrar Produto</h2>
                     <input type="text" placeholder="Nome" name="inputNome">
-                    <input type="text" placeholder="Sobrenome" name="inputSobrenome">
-                    <input type="text" placeholder="CPF" name="inputCPF">
-                    <input type="date" placeholder="Data Nascimento" name="inputDataNasc">
-                    <input type="text" placeholder="Telefone" name="inputTelefone">
-                    <select>
-                        <option>Cargo</option>
-                        <option>Entregador</option>
-                        <option>Escritorio</option>
-                    </select>
-                    <input type="number" placeholder="Salario" name="inputSalario">
-                    <input type="email" placeholder="Email" name="inputEmail">
-                    <input type="password" placeholder="Senha" name="inputSenha">
-            <!-- <section class="photo">
-                <h3>Selecionar foto do Funcionario:</h3>
+                    <input type="text" placeholder="Fabricante" name="inputFabricante">
+                    <input type="text" placeholder="Descrição" name="inputDescricao">
+                    <input type="number" placeholder="Valor" name="inputValor">
+                    <input type="number" placeholder="Quantidade" name="inputQuantidade">
+            <section class="photo">
+                <h3>Selecionar foto do produto:</h3>
                 <section>
                     <label for="file-upload" id="button">Escolher arquivo</label>
                     <input type="file" id="file-upload">
                     <label>Nenhum arquivo escolhido</label>
                 </section>
-            </section> -->
+            </section>
             <input value="CADASTRAR" type="submit" id="cadastar">
         </form>
     </main>

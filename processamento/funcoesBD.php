@@ -2,7 +2,10 @@
 function conectarBD(){
 
     $conexao = mysqli_connect("127.0.0.1","root","","xhopii");
-    return($conexao);
+    if (!$conexao) {
+        die("Erro na conexão: " . mysqli_connect_error());
+    }
+    return $conexao;
 }
 
 //cliente

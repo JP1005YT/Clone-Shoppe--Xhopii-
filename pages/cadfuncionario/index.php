@@ -3,7 +3,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Xhoppi | Cadastro de Produto</title>
+    <title>Xhoppi | Cadastro de Funcionario</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <link rel="shortcut icon" href="../../img/logo.png"/>
@@ -31,21 +31,37 @@
         </ul>
     </nav>
     <main>
-            <form method="POST" action="../../processamento/processamento.php">
-                <h2>Cadastrar Produto</h2>
+            <form method="POST" action="../../processamento/processamento_funcionario.php">
+                <h2>Cadastrar Funcionario</h2>
+                <?php
+                    session_start();
+                    if (isset($_SESSION['erro'])) {
+                        echo '<p class="error">' . $_SESSION['erro'] . '</p>';
+                        unset($_SESSION['erro']);
+                    }
+                ?>
+                    <input type="hidden" name="cadastroFuncionario">
                     <input type="text" placeholder="Nome" name="inputNome">
-                    <input type="text" placeholder="Fabricante" name="inputFabricante">
-                    <input type="text" placeholder="Descrição" name="inputDescricao">
-                    <input type="number" placeholder="Valor" name="inputValor">
-                    <input type="number" placeholder="Quantidade" name="inputQuantidade">
-            <!-- <section class="photo">
-                <h3>Selecionar foto do produto:</h3>
+                    <input type="text" placeholder="Sobrenome" name="inputSobrenome">
+                    <input type="text" placeholder="CPF" name="inputCPF">
+                    <input type="date" placeholder="Data Nascimento" name="inputDataNasc">
+                    <input type="text" placeholder="Telefone" name="inputTelefone">
+                    <select name="inputCargo">
+                        <option value="">Cargo</option>
+                        <option value="Entregador">Entregador</option>
+                        <option value="Escritorio">Escritório</option>
+                    </select>
+                    <input type="number" placeholder="Salario" name="inputSalario">
+                    <input type="email" placeholder="Email" name="inputEmail">
+                    <input type="password" placeholder="Senha" name="inputSenha">
+            <section class="photo">
+                <h3>Selecionar foto do Funcionario:</h3>
                 <section>
                     <label for="file-upload" id="button">Escolher arquivo</label>
                     <input type="file" id="file-upload">
                     <label>Nenhum arquivo escolhido</label>
                 </section>
-            </section> -->
+            </section>
             <input value="CADASTRAR" type="submit" id="cadastar">
         </form>
     </main>
@@ -116,7 +132,7 @@
         </section>
         <div class="copyright">
             <hr>
-            <div>&copy 2023 Xhoppi. Todos Direitos Acadêmicos Reservados</div>
+            <div>&copy 2024 Xhoppi. Todos Direitos Acadêmicos Reservados</div>
         </div>
     </footer>
     <script src='main.js'></script>
