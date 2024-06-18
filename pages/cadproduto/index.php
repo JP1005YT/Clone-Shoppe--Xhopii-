@@ -31,21 +31,21 @@
         </ul>
     </nav>
     <main>
-            <form method="POST" action="../../processamento/processamento_produto.php">
+            <form method="POST" action="../../processamento/processamento_produto.php" enctype="multipart/form-data">
                 <h2>Cadastrar Produto</h2>
                     <input type="text" placeholder="Nome" name="inputNome">
                     <input type="text" placeholder="Fabricante" name="inputFabricante">
                     <input type="text" placeholder="Descrição" name="inputDescricao">
                     <input type="number" placeholder="Valor" name="inputValor">
                     <input type="number" placeholder="Quantidade" name="inputQuantidade">
-            <section class="photo">
-                <h3>Selecionar foto do produto:</h3>
-                <section>
-                    <label for="file-upload" id="button">Escolher arquivo</label>
-                    <input type="file" id="file-upload">
-                    <label>Nenhum arquivo escolhido</label>
-                </section>
-            </section>
+                    <section class="photo">
+                        <h3>Selecionar foto do produto:</h3>
+                        <section>
+                            <label for="file-upload" id="button">Escolher arquivo</label>
+                            <input type="file" id="file-upload" name="file">
+                            <label id="archive_title">Nenhum arquivo escolhido</label>
+                        </section>
+                    </section>
             <input value="CADASTRAR" type="submit" id="cadastar">
         </form>
     </main>
@@ -119,6 +119,20 @@
             <div>&copy 2023 Xhoppi. Todos Direitos Acadêmicos Reservados</div>
         </div>
     </footer>
-    <script src='main.js'></script>
+    <script>
+        const file = document.querySelector("#file-upload")
+        file.addEventListener('change',(e)=>{
+            for(const archive of file.files){
+                document.querySelector("#archive_title").innerHTML = archive.name
+            }    
+        })
+        document.querySelectorAll('.navbar ul li').forEach(function(li) {
+            // Adicione um event listener de clique ao <li>
+            li.addEventListener('click', function() {
+                // Encontre o link (<a>) dentro do <li> e redirecione para o href
+                window.location = li.querySelector('a').href;
+            });
+        });
+    </script>
 </body>
 </html>

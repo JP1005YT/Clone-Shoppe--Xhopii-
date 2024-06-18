@@ -52,6 +52,10 @@ header{
         width: 80%;        
         display: flex;
         justify-content: space-around;
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
         li{
             cursor: pointer;
             display: flex;
@@ -134,7 +138,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 120px);
+    height: calc(120vh - 120px);
     background: $corCinzClaro;
     form{
         display: flex;
@@ -173,6 +177,9 @@ main{
                 color: $corPrincipal;
                 border: 2px solid $corPrincipal;
             }
+        }
+        input[type=file]{
+            display: none;
         }
         input{
             width: 70%;

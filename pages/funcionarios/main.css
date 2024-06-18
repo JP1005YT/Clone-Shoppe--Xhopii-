@@ -52,10 +52,6 @@ header .out-button a {
   display: flex;
   justify-content: space-around;
 }
-.navbar ul a {
-  text-decoration: none;
-  color: #fff;
-}
 .navbar ul li {
   cursor: pointer;
   display: flex;
@@ -64,8 +60,24 @@ header .out-button a {
   width: 12%;
   padding: 15px;
 }
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+}
 .navbar ul li:hover {
   background: #fb5630;
+}
+
+main {
+  margin-left: 10%;
+  width: 80%;
+  padding: 20px;
+}
+main h2 {
+  color: #fb5630;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 footer {
@@ -130,69 +142,8 @@ footer .copyright div {
   padding: 20px;
 }
 
-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: calc(120vh - 120px);
-  background: #cdc9cc;
-}
-main form {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-  width: 50%;
-  height: 90%;
-  background: #fff;
-  padding: 20px;
-  border-radius: 5px;
-}
-main form h2, main form h3 {
-  font-weight: bold;
-  color: #fb5630;
-}
-main form .photo {
-  width: 60%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 30px;
-}
-main form .photo h3 {
-  margin: 20px;
-}
-main form .photo section {
-  padding: 20px;
-}
-main form .photo section label {
-  margin: 20px;
-}
-main form .photo #button {
-  padding: 15px;
-  border-radius: 10px;
-  background: #fff;
-  color: #fb5630;
-  border: 2px solid #fb5630;
-}
-main form input[type=file] {
-  display: none;
-}
-main form input {
-  width: 70%;
-  padding: 20px;
-  margin: 10px;
-}
-main form #cadastar {
-  cursor: pointer;
-  background: #fb5630;
-  border: none;
-  color: #fff;
-}
-
 @font-face {
   font-family: "Roboto";
-  src: url("../../font/Roboto/Roboto-Regular.ttf");
+  src: url("./../../font/Roboto/Roboto-Regular.ttf");
   /* Adicione outros formatos de fonte aqui, se necessário */
 }/*# sourceMappingURL=main.css.map */

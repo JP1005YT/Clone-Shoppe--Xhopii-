@@ -59,7 +59,7 @@
                 <section>
                     <label for="file-upload" id="button">Escolher arquivo</label>
                     <input type="file" id="file-upload">
-                    <label>Nenhum arquivo escolhido</label>
+                    <label id="archive_title">Nenhum arquivo escolhido</label>
                 </section>
             </section>
             <input value="CADASTRAR" type="submit" id="cadastar">
@@ -135,6 +135,20 @@
             <div>&copy 2024 Xhoppi. Todos Direitos Acadêmicos Reservados</div>
         </div>
     </footer>
-    <script src='main.js'></script>
+    <script>
+        const file = document.querySelector("#file-upload")
+        file.addEventListener('change',(e)=>{
+            for(const archive of file.files){
+                document.querySelector("#archive_title").innerHTML = archive.name
+            }    
+        })
+        document.querySelectorAll('.navbar ul li').forEach(function(li) {
+            // Adicione um event listener de clique ao <li>
+            li.addEventListener('click', function() {
+                // Encontre o link (<a>) dentro do <li> e redirecione para o href
+                window.location = li.querySelector('a').href;
+            });
+        });
+    </script>
 </body>
 </html>

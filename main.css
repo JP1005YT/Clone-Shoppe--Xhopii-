@@ -60,6 +60,10 @@ header .out-button a {
   width: 12%;
   padding: 15px;
 }
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+}
 .navbar ul li:hover {
   background: #fb5630;
 }

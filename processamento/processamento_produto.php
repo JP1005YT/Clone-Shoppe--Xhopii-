@@ -21,8 +21,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             exit;
         }
 
-        // Insere o produto no banco de dados
-        inserirProduto($nome, $fabricante, $descricao, $valor, $quantidade);
+
+        // Guardar Imagem
+
+        $imagemParaGuardar = $_FILES['file']; //Recebe o arquivo do formulario
+        
+        $nomeAleatorio = uniqid() . '-' . basename($imagemParaGuardar['name']); // coloca um nome aleatorio no arquivo
+
+        $localParaGuardar = './../img/produtos/'.$nomeAleatorio; //lugar para guardar os arquivos
+
+        $stringParaOBanco = './../../img/produtos/'.$nomeAleatorio;
+
+        echo $localParaGuardar;
+
+        move_uploaded_file($imagemParaGuardar['tmp_name'],$localParaGuardar); //comando que guarda o arquivo
+        
+        inserirProduto($nome, $fabricante, $descricao, $valor, $quantidade,$stringParaOBanco); // Manda tudo pro banco
+
 
         // Define mensagem de sucesso
         $mensagem = "Produto cadastrado com sucesso.";

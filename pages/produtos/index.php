@@ -35,86 +35,23 @@
             <h2>Produtos</h2>
         </span>
         <div class="content">
-            <div>
-                <img src="../../img/produto1.png">
-                <span class="desc">Camisa Desenvolvedor Front-End CSS</span>
-                <span class="fabricante"><strong>Fabricante:</strong>Eletiva Uniformes</span>
-                <span class="desc"><strong>Descrição:</strong>Uma Camisa Ideal para programar por mais de 12 horas</span>
-                <span class="price">R$ 59,90</span>
-                <span class="storage">171 disponíveis</span>
-            </div>
-            <div>
-                <img src="../../img/produto1.png">
-                <span class="desc">Camisa Desenvolvedor Front-End CSS</span>
-                <span class="fabricante"><strong>Fabricante:</strong>Eletiva Uniformes</span>
-                <span class="desc"><strong>Descrição:</strong>Uma Camisa Ideal para programar por mais de 12 horas</span>
-                <span class="price">R$ 59,90</span>
-                <span class="storage">171 disponíveis</span>
-            </div>
-            <div>
-                <img src="../../img/produto1.png">
-                <span class="desc">Camisa Desenvolvedor Front-End CSS</span>
-                <span class="fabricante"><strong>Fabricante:</strong>Eletiva Uniformes</span>
-                <span class="desc"><strong>Descrição:</strong>Uma Camisa Ideal para programar por mais de 12 horas</span>
-                <span class="price">R$ 59,90</span>
-                <span class="storage">171 disponíveis</span>
-            </div>
-            <div>
-                <img src="../../img/produto1.png">
-                <span class="desc">Camisa Desenvolvedor Front-End CSS</span>
-                <span class="fabricante"><strong>Fabricante:</strong>Eletiva Uniformes</span>
-                <span class="desc"><strong>Descrição:</strong>Uma Camisa Ideal para programar por mais de 12 horas</span>
-                <span class="price">R$ 59,90</span>
-                <span class="storage">171 disponíveis</span>
-            </div>
-            <div>
-                <img src="../../img/produto1.png">
-                <span class="desc">Camisa Desenvolvedor Front-End CSS</span>
-                <span class="fabricante"><strong>Fabricante:</strong>Eletiva Uniformes</span>
-                <span class="desc"><strong>Descrição:</strong>Uma Camisa Ideal para programar por mais de 12 horas</span>
-                <span class="price">R$ 59,90</span>
-                <span class="storage">171 disponíveis</span>
-            </div>
-            <div>
-                <img src="../../img/produto1.png">
-                <span class="desc">Camisa Desenvolvedor Front-End CSS</span>
-                <span class="fabricante"><strong>Fabricante:</strong>Eletiva Uniformes</span>
-                <span class="desc"><strong>Descrição:</strong>Uma Camisa Ideal para programar por mais de 12 horas</span>
-                <span class="price">R$ 59,90</span>
-                <span class="storage">171 disponíveis</span>
-            </div>
-            <div>
-                <img src="../../img/produto1.png">
-                <span class="desc">Camisa Desenvolvedor Front-End CSS</span>
-                <span class="fabricante"><strong>Fabricante:</strong>Eletiva Uniformes</span>
-                <span class="desc"><strong>Descrição:</strong>Uma Camisa Ideal para programar por mais de 12 horas</span>
-                <span class="price">R$ 59,90</span>
-                <span class="storage">171 disponíveis</span>
-            </div>
-            <div>
-                <img src="../../img/produto1.png">
-                <span class="desc">Camisa Desenvolvedor Front-End CSS</span>
-                <span class="fabricante"><strong>Fabricante:</strong>Eletiva Uniformes</span>
-                <span class="desc"><strong>Descrição:</strong>Uma Camisa Ideal para programar por mais de 12 horas</span>
-                <span class="price">R$ 59,90</span>
-                <span class="storage">171 disponíveis</span>
-            </div>
-            <div>
-                <img src="../../img/produto1.png">
-                <span class="desc">Camisa Desenvolvedor Front-End CSS</span>
-                <span class="fabricante"><strong>Fabricante:</strong>Eletiva Uniformes</span>
-                <span class="desc"><strong>Descrição:</strong>Uma Camisa Ideal para programar por mais de 12 horas</span>
-                <span class="price">R$ 59,90</span>
-                <span class="storage">171 disponíveis</span>
-            </div>
-            <div>
-                <img src="../../img/produto1.png">
-                <span class="desc">Camisa Desenvolvedor Front-End CSS</span>
-                <span class="fabricante"><strong>Fabricante:</strong>Eletiva Uniformes</span>
-                <span class="desc"><strong>Descrição:</strong>Uma Camisa Ideal para programar por mais de 12 horas</span>
-                <span class="price">R$ 59,90</span>
-                <span class="storage">171 disponíveis</span>
-            </div>
+            <?php
+            include_once('./../../processamento/funcoesBD.php');
+            
+            $reposta = retornarProduto();
+
+            while($row = $reposta->fetch_assoc()){
+                echo '
+                <div>
+                    <img src="'.$row['imageSrc'] .'">
+                    <span class="desc">'.$row['nome'] .'</span>
+                    <span class="fabricante"><strong>Fabricante:</strong>'.$row['fabricante'] .'</span>
+                    <span class="desc"><strong>Descrição:</strong>'.$row['descricao'] .'</span>
+                    <span class="price">R$ '.$row['valor'] .'</span>
+                    <span class="storage">'.$row['quantidade'] .' disponíveis</span>
+                </div>';
+            }
+            ?>
         </div>
     </section>
     <footer>
@@ -194,6 +131,13 @@
                 window.location.href = "../produto/"
             })
         })
+        document.querySelectorAll('.navbar ul li').forEach(function(li) {
+            // Adicione um event listener de clique ao <li>
+            li.addEventListener('click', function() {
+                // Encontre o link (<a>) dentro do <li> e redirecione para o href
+                window.location = li.querySelector('a').href;
+            });
+        });
     </script>
 </body>
 </html>

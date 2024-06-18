@@ -15,7 +15,7 @@
                 <span>Xhopii</span>
             </span>
         </div>
-        <nav>
+        <nav class="navbar">
             <ul>
                 <li> <a href="./../../index.php"> Home </a></li>
                 <li> <a href="./../../pages/cadcliente/"> Cadastro Cliente </a> </li>

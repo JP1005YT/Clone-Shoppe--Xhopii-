@@ -222,6 +222,14 @@
                 window.location.href = "/pages/produto/"
             })
         })
+
+        document.querySelectorAll('.navbar ul li').forEach(function(li) {
+            // Adicione um event listener de clique ao <li>
+            li.addEventListener('click', function() {
+                // Encontre o link (<a>) dentro do <li> e redirecione para o href
+                window.location = li.querySelector('a').href;
+            });
+        });
     </script>
 </body>
 </html>

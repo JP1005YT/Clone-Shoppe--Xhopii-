@@ -72,129 +72,12 @@ header{
 main{
     margin-left: 10%;
     width: 80%;
-    .carrosel{
-        margin-top: 100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        overflow: hidden;
-        width: 90%;
-        margin-left: 5%;
-        height: 400px;
-        img{
-            height:100%;
-            display: none;
-            &.ativo{
-                display: block;
-            }
-        }
-        nav{
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: absolute;
-            bottom: 0;
-            ul{
-                width: 40%;
-                display: flex;
-                justify-content: space-evenly;
-                font-size: 20px;
-                list-style: none;
-                li{
-                    width: 25%;
-                    height: 10px;
-                    margin: 0 10px 0 10px;
-                    background: #cfcfcf;
-                    &.ativo{
-                        background: #ffffff;
-                    }
-                }
-            }
-        }
-        button{
-            color: #ffffff;
-            position: absolute;
-            font-size: 60px;
-            background: transparent;
-            border: none;
-            padding: 100px 0 100px 0;
-            cursor: pointer;
-            &.backButton{
-                left: 100px;
-            }
-            &.nextButton{
-                right: 100px
-            }
-        }
-    }
-}
-.promocao{
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 97px;
-    img{
-        height: 100%;
-    }
-}
-.produtos{
-    margin-top: 0px;
-    .title{
-        position: relative;
-        width: 100%;
+    padding: 20px;
+    h2{
+        color: $corPrincipal;
+        font-weight: bold;
         text-align: center;
-        color: $corSecundario;
-        h2{
-            padding: 40px;
-        }
-        &::before{
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 5px;
-            bottom: 0;
-            background: $corSecundario;
-        }
-    }
-    .content{
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 10px 30px;
-        margin: 20px 0 20px 0;
-        div{
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            padding: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.173);
-            .desc{
-                text-align:start;
-                padding: 20px 0 50px 0;
-            }
-            .price{
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                padding: 10px;
-                color: $corPrincipal;
-            }
-            .storage{
-                position: absolute;
-                right: 0;
-                bottom: 0;
-                padding: 10px;
-                color: $corCinzClaro;
-            }
-            img{
-                height: 200px;
-            }
-        }
+        margin-bottom: 20px;
     }
 }
 footer{
@@ -264,6 +147,6 @@ footer{
 }
 @font-face {
     font-family: 'Roboto';
-    src: url('./font/Roboto/Roboto-Regular.ttf');
+    src: url('./../../font/Roboto/Roboto-Regular.ttf');
     /* Adicione outros formatos de fonte aqui, se necessário */
 }

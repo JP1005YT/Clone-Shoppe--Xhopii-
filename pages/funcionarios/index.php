@@ -159,6 +159,14 @@ $funcionarios = retornarFuncionario();
             <div>&copy 2024 Xhoppi. Todos Direitos Acadêmicos Reservados</div>
         </div>
     </footer>
-    <script src="main.js"></script>
+    <script>
+        document.querySelectorAll('.navbar ul li').forEach(function(li) {
+            // Adicione um event listener de clique ao <li>
+            li.addEventListener('click', function() {
+                // Encontre o link (<a>) dentro do <li> e redirecione para o href
+                window.location = li.querySelector('a').href;
+            });
+        });
+    </script>
 </body>
 </html>

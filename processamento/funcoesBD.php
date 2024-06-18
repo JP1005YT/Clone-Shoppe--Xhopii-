@@ -38,11 +38,11 @@ function loginCliente($email, $senha){
 }
 
 //produto
-function inserirProduto($nome, $fabricante, $descricao, $valor, $quantidade){
+function inserirProduto($nome, $fabricante, $descricao, $valor, $quantidade,$imageSrc){
 
     $conexao = conectarBD();
-    $consulta = "INSERT INTO produto (nome, fabricante, descricao, valor, quantidade) VALUES 
-    ('$nome','$fabricante','$descricao','$valor','$quantidade')";
+    $consulta = "INSERT INTO produto (nome, fabricante, descricao, valor, quantidade ,imageSrc) VALUES 
+    ('$nome','$fabricante','$descricao','$valor','$quantidade','$imageSrc')";
 
     mysqli_query($conexao, $consulta);
 }
