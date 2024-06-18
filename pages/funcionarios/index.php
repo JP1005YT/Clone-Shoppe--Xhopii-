@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once "./../../processamento/funcoesBD.php";
 $funcionarios = retornarFuncionario();
 ?>
@@ -38,7 +37,14 @@ $funcionarios = retornarFuncionario();
             <h1>Xhopii</h1>
         </div>
         <div class="out-button">
-            <a href="../../pages/login/">Sair</a>
+        <?php
+                session_start();
+                if(isset($_SESSION['cliente'])){
+                    echo '<a href="./../../processamento/sair.php">Sair</a>';
+                }else{
+                    echo '<a href="./../pages/login/index.php">Entrar</a>';
+                }
+            ?>
         </div>
     </header>
     <nav class="navbar">

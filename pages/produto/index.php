@@ -1,3 +1,15 @@
+<?php
+    include_once('./../../processamento/funcoesBD.php');
+            
+    $reposta = retornarProduto();
+
+    while($row = $reposta->fetch_assoc()){
+        if($row['id'] = $_GET['id']){
+            $produto = $row;
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,36 +41,18 @@
     </header>
     <main>
         <div class="shirts">
-            <img src="img/produto1.png" alt="Camiza" id="select">
-            <img src="img/produto2.png" alt="Camiza">
-            <img src="img/produto3.png" alt="Camiza">
-            <img src="img/produto4.png" alt="Camiza">
-            <img src="img/produto5.png" alt="Camiza">
+            <img src="<?php echo $produto['imageSrc']?>" alt="Camiza" id="select">
         </div>
         <div class="ProdImage">
-            <img src="img/produto1.png" alt="Camiza" width="570px" height="600px">
+            <img src="<?php echo $produto['imageSrc']?>" alt="<?php echo $produto['nome']?>" width="570px" height="600px">
         </div>
         <div class="DescProd">
-            <h2>Camisa Desenvolvedor Front-End CSS</h2>
-            <p class="price">R$56,90</p>
-            <p>171 peças disponiveis</p>
-            <p>Modelos:</p>
-            <section class="scol">
-                <span>Preto</span>
-                <span>Azul</span>
-                <span>Verde</span>
-                <span>Cinza</span>
-                <span>Rosa</span>
+            <h2><?php echo $produto['nome']?></h2>
+            <p class="price">R$<?php echo $produto['valor']?></p>
+            <p><?php echo $produto['quantidade']?> peças disponiveis</p>
+            <section>
+                <button>Comprar Agora</button>
             </section>
-            <p>Tamanhos:</p>
-            <section class="scol">
-                <span>P</span>
-                <span>M</span>
-                <span>G</span>
-                <span>GG</span>
-            </section>
-            <p>Tamanho Selecionado:P</p>
-            <button>Comprar Agora</button>
         </div>
     </main>
 </body>

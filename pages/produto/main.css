@@ -7,6 +7,7 @@
 body{
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
 }
 header{
     display: flex;
@@ -43,6 +44,10 @@ header ul{
     color: #fb5630;
     font-size: 22px;
 }
+header a{
+    text-decoration: none;
+    color: #000;
+}
 
 main{
     margin-top: 50px;
@@ -52,13 +57,17 @@ main{
     height: 75%;
     margin-left: 10%;
 }
+main .ProdImage{
+    padding: 20px;
+}
 main .shirts{
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     width: 200px;
     height: 70%;
+    padding: 25px;
 }
 main .shirts #select{
     border: 1px solid #fb5630;
@@ -101,6 +110,13 @@ main .DescProd button{
     color: #ffffff;
     padding: 20px;
     border: none;
+}
+main .DescProd section{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 80%;
+    height: 100%;
 }
 @font-face {
     font-family: 'Roboto';

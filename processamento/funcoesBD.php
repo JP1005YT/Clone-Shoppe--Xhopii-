@@ -37,15 +37,32 @@ function loginCliente($email, $senha){
     return false;
 }
 
-function redefinirSenha($email,$senha){
+function redefinirSenha($email, $senha) {
     $conexao = conectarBD();
-    $string = "UPDATE cliente SET senha = $senha WHERE email = '$email'";
 
-    $resultSenha = mysqli_query($conexao, $string);
+    // Usa prepared statements para evitar injeção de SQL
+    $stmt = $conexao->prepare("UPDATE cliente SET senha = ? WHERE email = ?");
+    $stmt->bind_param("ss", $senha, $email); // "ss" indica que ambos os parâmetros são strings
 
-    if($resultSenha){
+    $resultSenha = $stmt->execute();
+
+    // Verifica se a execução foi bem-sucedida
+    if ($resultSenha) {
         return true;
+    } else {
+        return false;
     }
+
+    // Fecha o statement e a conexão
+    $stmt->close();
+    $conexao->close();
+}
+
+function retornarMaisBaratos(){
+    $conexao = conectarBD();
+    $consulta = 'SELECT * FROM produto ORDER BY valor ASC LIMIT 20';
+    $listaProduto = mysqli_query($conexao, $consulta);
+    return($listaProduto);
 }
 
 //produto

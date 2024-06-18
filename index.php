@@ -1,3 +1,6 @@
+<?php
+    include_once('./processamento/funcoesBD.php');
+?>
 <!DOCTYPE html>
 <head>
     <meta charset='utf-8'>
@@ -15,7 +18,14 @@
             <h1>Xhopii</h1>
         </div>
         <div class="out-button">
-            <a href="./pages/login/index.php">Sair</a>
+            <?php
+                session_start();
+                if(isset($_SESSION['cliente'])){
+                    echo '<a href="./processamento/sair.php">Sair</a>';
+                }else{
+                    echo '<a href="./pages/login/index.php">Entrar</a>';
+                }
+            ?>
         </div>
     </header>
     <nav class="navbar">
@@ -54,67 +64,19 @@
                 <h2>Descobertas do Dia</h2>
             </span>
             <div class="content">
-                <div>
-                    <img src="./img/produto1.png">
-                    <span class="desc">Camisa Desenvolvedor Front-End CSS</span>
-                    <span class="price">R$ 59,90</span>
-                    <span class="storage">171 disponíveis</span>
-                </div>
-                <div>
-                    <img src="./img/produto1.png">
-                    <span class="desc">Camisa Desenvolvedor Front-End CSS</span>
-                    <span class="price">R$ 59,90</span>
-                    <span class="storage">171 disponíveis</span>
-                </div>
-                <div>
-                    <img src="./img/produto1.png">
-                    <span class="desc">Camisa Desenvolvedor Front-End CSS</span>
-                    <span class="price">R$ 59,90</span>
-                    <span class="storage">171 disponíveis</span>
-                </div>
-                <div>
-                    <img src="./img/produto1.png">
-                    <span class="desc">Camisa Desenvolvedor Front-End CSS</span>
-                    <span class="price">R$ 59,90</span>
-                    <span class="storage">171 disponíveis</span>
-                </div>
-                <div>
-                    <img src="./img/produto1.png">
-                    <span class="desc">Camisa Desenvolvedor Front-End CSS</span>
-                    <span class="price">R$ 59,90</span>
-                    <span class="storage">171 disponíveis</span>
-                </div>
-                <div>
-                    <img src="./img/produto1.png">
-                    <span class="desc">Camisa Desenvolvedor Front-End CSS</span>
-                    <span class="price">R$ 59,90</span>
-                    <span class="storage">171 disponíveis</span>
-                </div>
-                <div>
-                    <img src="./img/produto1.png">
-                    <span class="desc">Camisa Desenvolvedor Front-End CSS</span>
-                    <span class="price">R$ 59,90</span>
-                    <span class="storage">171 disponíveis</span>
-                </div>
-                <div>
-                    <img src="./img/produto1.png">
-                    <span class="desc">Camisa Desenvolvedor Front-End CSS</span>
-                    <span class="price">R$ 59,90</span>
-                    <span class="storage">171 disponíveis</span>
-                </div>
-                <div>
-                    <img src="./img/produto1.png">
-                    <span class="desc">Camisa Desenvolvedor Front-End CSS</span>
-                    <span class="price">R$ 59,90</span>
-                    <span class="storage">171 disponíveis</span>
-                </div>
-                <div>
-                    <img src="./img/produto1.png">
-                    <span class="desc">Camisa Desenvolvedor Front-End CSS</span>
-                    <span class="price">R$ 59,90</span>
-                    <span class="storage">171 disponíveis</span>
-                </div>
-            </div>
+                <?php
+                    $resp = retornarMaisBaratos();
+                
+                    while($row = $resp->fetch_assoc()){
+                        echo '
+                    <div>
+                        <img src="'.substr($row['imageSrc'],6).'">
+                        <span class="desc">'.$row['nome'].'</span>
+                        <span class="price">R$ '.$row['valor'].'</span>
+                        <span class="storage">'.$row['quantidade'].' disponíveis</span>
+                    </div>';
+                    }
+                ?>
         </section>
     </main>
     <footer>

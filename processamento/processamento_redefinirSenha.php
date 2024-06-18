@@ -3,11 +3,11 @@ session_start();
 require_once "funcoesBD.php";
 
 $email = $_POST['inputEmail'];
-$senha = $_POST['password'];
-$senhacon = $_POST['passwordcon'];
+$senha = strval($_POST['password']);
+$senhacon = strval($_POST['passwordcon']);
 
 if ($senha == $senhacon) {
-    redefinirSenha($email,$senha);
+    redefinirSenha($email,strval($senha));
 }
 
 header('Location: ./../pages/login/');

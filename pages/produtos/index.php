@@ -16,7 +16,14 @@
             <h1>Xhopii</h1>
         </div>
         <div class="out-button">
-            <a href="../../pages/login/">Sair</a>
+        <?php
+                session_start();
+                if(isset($_SESSION['cliente'])){
+                    echo '<a href="./../../processamento/sair.php">Sair</a>';
+                }else{
+                    echo '<a href="./../pages/login/index.php">Entrar</a>';
+                }
+            ?>
         </div>
     </header>
     <nav class="navbar">
@@ -42,7 +49,7 @@
 
             while($row = $reposta->fetch_assoc()){
                 echo '
-                <div>
+                <div id="'.$row['id'].'">
                     <img src="'.$row['imageSrc'] .'">
                     <span class="desc">'.$row['nome'] .'</span>
                     <span class="fabricante"><strong>Fabricante:</strong>'.$row['fabricante'] .'</span>
@@ -128,7 +135,7 @@
         const Divs = document.querySelectorAll(".content div")
         Divs.forEach(prod => {
             prod.addEventListener("click",()=>{
-                window.location.href = "../produto/"
+                window.location.href = "../produto?id=" + prod.id;
             })
         })
         document.querySelectorAll('.navbar ul li').forEach(function(li) {
@@ -138,6 +145,7 @@
                 window.location = li.querySelector('a').href;
             });
         });
+        window.scrollTo(0, 0)
     </script>
 </body>
 </html>
