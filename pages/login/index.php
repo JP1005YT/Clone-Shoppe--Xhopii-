@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +16,6 @@
             <img src="../../img/logo.png" height="50px">
             <h1>Xhopii</h1>
         </div>
-        <?php session_start(); ?>
         <?php if (isset($_SESSION['mensagem'])): ?>
             <div class="mensagem">
                 <?php echo $_SESSION['mensagem']; ?>

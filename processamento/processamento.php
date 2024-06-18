@@ -11,11 +11,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($cliente) {
             $_SESSION['cliente'] = $cliente;
-            $_SESSION['mensagem'] = "Login realizado com sucesso!";
-            header('Location: ../../index.php');
+            header('Location: ./../index.php');
             exit;
         } else {
             $_SESSION['erro'] = "Email ou senha incorretos.";
+            echo $cliente;
             header('Location: ../pages/login/index.php');
             exit;
         }
@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 } else {
     $_SESSION['erro'] = "Método de requisição não permitido.";
-    header('Location: ../pages/login/index.php');
+    header('Location: ../pages/login/index.php');    
     exit;
 }
 ?>

@@ -30,8 +30,8 @@ function loginCliente($email, $senha){
     $resultado = mysqli_query($conexao, $consulta);
     if($resultado && mysqli_num_rows($resultado) > 0){
         $cliente = mysqli_fetch_assoc($resultado);
-        if(password_verify($senha, $cliente['senha'])){
-            return $cliente;
+        if($senha == $cliente['senha']){
+            return $cliente;    
         }
     }
     return false;

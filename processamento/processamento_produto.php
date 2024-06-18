@@ -38,11 +38,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         inserirProduto($nome, $fabricante, $descricao, $valor, $quantidade,$stringParaOBanco); // Manda tudo pro banco
 
-
-        // Define mensagem de sucesso
-        $mensagem = "Produto cadastrado com sucesso.";
-        $_SESSION['mensagem'] = $mensagem;
-
         // Redireciona para a página de produtos
         header('Location: ../pages/produtos/index.php');
         exit;
