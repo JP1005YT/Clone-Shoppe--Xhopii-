@@ -20,11 +20,18 @@
         </div>
     </header>
     <main>
-        <form>
+        <form method="POST" action="./../../processamento/processamento_redefinirSenha.php">
+
             <span class="backButton"><</span>
             <h2>Redefinir senha</h2>
-            <input placeholder="Email">
+            <input type="text" placeholder="Email" name="inputEmail">
+
+            <input type="text" placeholder="Digite a Nova Senha" name="password">
+            <input type="text" placeholder="Digite a novamente a Nova senha"  name="passwordcon">
+
+
             <input value="Enviar" type="submit" id="confirmButton">
+
         </form>
     </main>
     <footer>
@@ -98,10 +105,6 @@
         </div>
     </footer>
     <script>
-        document.querySelector("#confirmButton").addEventListener("click",(e)=>{
-            e.preventDefault()
-            window.location.href = "../../"
-        })
         document.querySelectorAll('.navbar ul li').forEach(function(li) {
             // Adicione um event listener de clique ao <li>
             li.addEventListener('click', function() {

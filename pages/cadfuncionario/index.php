@@ -33,13 +33,6 @@
     <main>
             <form method="POST" action="../../processamento/processamento_funcionario.php">
                 <h2>Cadastrar Funcionario</h2>
-                <?php
-                    session_start();
-                    if (isset($_SESSION['erro'])) {
-                        echo '<p class="error">' . $_SESSION['erro'] . '</p>';
-                        unset($_SESSION['erro']);
-                    }
-                ?>
                     <input type="hidden" name="cadastroFuncionario">
                     <input type="text" placeholder="Nome" name="inputNome">
                     <input type="text" placeholder="Sobrenome" name="inputSobrenome">
@@ -54,14 +47,6 @@
                     <input type="number" placeholder="Salario" name="inputSalario">
                     <input type="email" placeholder="Email" name="inputEmail">
                     <input type="password" placeholder="Senha" name="inputSenha">
-            <section class="photo">
-                <h3>Selecionar foto do Funcionario:</h3>
-                <section>
-                    <label for="file-upload" id="button">Escolher arquivo</label>
-                    <input type="file" id="file-upload">
-                    <label id="archive_title">Nenhum arquivo escolhido</label>
-                </section>
-            </section>
             <input value="CADASTRAR" type="submit" id="cadastar">
         </form>
     </main>

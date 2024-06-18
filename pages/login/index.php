@@ -34,7 +34,7 @@
             <input type="password" placeholder="Senha" name="inputSenha">
             <input value="ENTRE" type="submit" id="confirmButton">
             <section class="separation1">
-                <span onclick="toPage('pages/redefinirSenha/index.html')">Esqueci minha senha</span>
+                <span onclick="toPage('../../pages/redefinirSenha/')">Esqueci minha senha</span>
                 <span>Fazer login com SMS</span>
             </section>
             <section class="separation2">
@@ -55,7 +55,7 @@
                     Apple
                 </li>
             </ul>
-            <span class="separation4">Novo na Xhopii? <a href="#">Cadastrar-se</a></span>
+            <span class="separation4">Novo na Xhopii? <a href="./../cadcliente/">Cadastrar-se</a></span>
         </form>
     </main>
     <footer>

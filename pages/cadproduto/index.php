@@ -46,7 +46,7 @@
                             <label id="archive_title">Nenhum arquivo escolhido</label>
                         </section>
                     </section>
-            <input value="CADASTRAR" type="submit" id="cadastar">
+            <input value="Cadastrar" type="submit" id="cadastar">
         </form>
     </main>
     <footer>

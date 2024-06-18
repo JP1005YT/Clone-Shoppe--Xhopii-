@@ -37,12 +37,22 @@ function loginCliente($email, $senha){
     return false;
 }
 
+function redefinirSenha($email,$senha){
+    $conexao = conectarBD();
+    $string = "UPDATE cliente SET senha = $senha WHERE email = '$email'";
+
+    $resultSenha = mysqli_query($conexao, $string);
+
+    if($resultSenha){
+        return true;
+    }
+}
+
 //produto
 function inserirProduto($nome, $fabricante, $descricao, $valor, $quantidade,$imageSrc){
 
     $conexao = conectarBD();
-    $consulta = "INSERT INTO produto (nome, fabricante, descricao, valor, quantidade ,imageSrc) VALUES 
-    ('$nome','$fabricante','$descricao','$valor','$quantidade','$imageSrc')";
+    $consulta = "INSERT INTO produto (nome, fabricante, descricao, valor, quantidade ,imageSrc) VALUES ('$nome','$fabricante','$descricao','$valor','$quantidade','$imageSrc')";
 
     mysqli_query($conexao, $consulta);
 }

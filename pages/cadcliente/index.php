@@ -33,13 +33,6 @@
     <main>
         <form method="POST" action="../../processamento/processamento_cliente.php">
             <h2>Cadastrar Cliente</h2>
-                <?php
-                    session_start();
-                    if (isset($_SESSION['erro'])) {
-                        echo '<p class="error">' . $_SESSION['erro'] . '</p>';
-                        unset($_SESSION['erro']);
-                    }
-                ?>
                 <input type="text" placeholder="Nome" name="inputNome">
                 <input type="text" placeholder="Sobrenome" name="inputSobrenome">
                 <input type="text" placeholder="CPF" name="inputCPF">
@@ -47,14 +40,6 @@
                 <input type="text" placeholder="Telefone" name="inputTelefone">
                 <input type="text" placeholder="Email" name="inputEmail">
                 <input type="password" placeholder="Senha" name="inputSenha">
-            <section class="photo">
-                <h3>Selecionar foto do cliente:</h3>
-                <section>
-                    <label for="file-upload" id="button">Escolher arquivo</label>
-                    <input type="file" id="file-upload">
-                    <label>Nenhum arquivo escolhido</label>
-                </section>
-            </section>
             <input value="Cadastrar" type="submit" id="cadastar">
         </form>
     </main>
