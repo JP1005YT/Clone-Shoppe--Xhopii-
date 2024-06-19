@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 19/06/2024 às 03:36
+-- Tempo de geração: 19/06/2024 às 04:40
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -42,7 +42,6 @@ CREATE TABLE `cliente` (
 --
 
 INSERT INTO `cliente` (`cpf`, `nome`, `sobrenome`, `dataNascimento`, `telefone`, `email`, `senha`) VALUES
-('487.677.598-23', 'Manoela', 'Pinheiro da Silva', '2006-03-29', '(18) 99681-6585', 'manoela2903@outlook.com', 'Lisa2903'),
 ('510.470.278-28', 'João Pedro', 'Garcia Girotto ', '2006-01-04', '(18) 99123-8584', 'joao.girotto@fatec.sp.gov.br', '0401'),
 ('123.456.789-90', 'Daniel Corno', 'Dantas Jcometo', '2005-10-31', '(18) 99722-2271', 'daniel.jacometo@fatec.sp.gov.br', '12345678'),
 ('123.456.789-21', 'Lorena', 'Andrade da Silva', '2020-02-07', '(18) 99878-8541', 'lorena.silva@outlook.com', '123456'),
