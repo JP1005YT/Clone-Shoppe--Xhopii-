@@ -69,7 +69,7 @@
                 
                     while($row = $resp->fetch_assoc()){
                         echo '
-                    <div>
+                    <div id="'.$row['id'].'">
                         <img src="'.substr($row['imageSrc'],6).'">
                         <span class="desc">'.$row['nome'].'</span>
                         <span class="price">R$ '.$row['valor'].'</span>
@@ -181,7 +181,7 @@
         const Divs = document.querySelectorAll(".content div")
         Divs.forEach(prod => {
             prod.addEventListener("click",()=>{
-                window.location.href = "/pages/produto/"
+                window.location.href = "./pages/produto?id=" + prod.id;
             })
         })
 

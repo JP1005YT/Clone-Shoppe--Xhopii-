@@ -4,7 +4,7 @@
     $reposta = retornarProduto();
 
     while($row = $reposta->fetch_assoc()){
-        if($row['id'] = $_GET['id']){
+        if($row['id'] == $_GET['id']){
             $produto = $row;
         }
     }

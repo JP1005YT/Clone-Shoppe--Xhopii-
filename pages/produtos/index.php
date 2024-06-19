@@ -21,7 +21,7 @@
                 if(isset($_SESSION['cliente'])){
                     echo '<a href="./../../processamento/sair.php">Sair</a>';
                 }else{
-                    echo '<a href="./../pages/login/index.php">Entrar</a>';
+                    echo '<a href="./../login/index.php">Entrar</a>';
                 }
             ?>
         </div>
