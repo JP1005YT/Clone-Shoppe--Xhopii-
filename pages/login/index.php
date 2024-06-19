@@ -31,7 +31,10 @@
         <form method="POST" action="../../processamento/processamento.php">
             <h2>Login</h2>
             <input type="text" placeholder="Email" name="inputEmail">
-            <input type="password" placeholder="Senha" name="inputSenha">
+            <input type="password" placeholder="Senha" name="inputSenha" id="inputSenha">
+            <label>
+                <input type="checkbox" id="showPassword"> Mostrar Senha
+            </label>
             <input value="ENTRE" type="submit" id="confirmButton">
             <section class="separation1">
                 <span onclick="toPage('../../pages/redefinirSenha/')">Esqueci minha senha</span>
@@ -138,6 +141,14 @@
                 // Encontre o link (<a>) dentro do <li> e redirecione para o href
                 window.location = li.querySelector('a').href;
             });
+        });
+        document.getElementById('showPassword').addEventListener('change', function() {
+            var inputSenha = document.getElementById('inputSenha');
+            if (this.checked) {
+                inputSenha.type = 'text';
+            } else {
+                inputSenha.type = 'password';
+            }
         });
     </script>
 </body>

@@ -123,7 +123,7 @@
         </section>
         <div class="copyright">
             <hr>
-            <div>&copy 2023 Xhoppi. Todos Direitos Acadêmicos Reservados</div>
+            <div>&copy 2024 Xhoppi. Todos Direitos Acadêmicos Reservados</div>
         </div>
     </footer>
     <script>

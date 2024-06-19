@@ -25,11 +25,11 @@
             <span class="backButton"><</span>
             <h2>Redefinir senha</h2>
             <input type="text" placeholder="Email" name="inputEmail">
-
-            <input type="text" placeholder="Digite a Nova Senha" name="password">
-            <input type="text" placeholder="Digite a novamente a Nova senha"  name="passwordcon">
-
-
+            <input type="password" placeholder="Digite a Nova Senha" name="password" id="password">
+            <input type="password" placeholder="Digite a novamente a Nova senha" name="passwordcon" id="passwordcon">
+            <label>
+                <input type="checkbox" id="showPassword"> Mostrar Senha
+            </label>
             <input value="Enviar" type="submit" id="confirmButton">
 
         </form>
@@ -101,7 +101,7 @@
         </section>
         <div class="copyright">
             <hr>
-            <div>&copy 2023 Xhoppi. Todos Direitos Acadêmicos Reservados</div>
+            <div>&copy 2024 Xhoppi. Todos Direitos Acadêmicos Reservados</div>
         </div>
     </footer>
     <script>
@@ -111,6 +111,17 @@
                 // Encontre o link (<a>) dentro do <li> e redirecione para o href
                 window.location = li.querySelector('a').href;
             });
+        });
+        document.getElementById('showPassword').addEventListener('change', function() {
+            var password = document.getElementById('password');
+            var passwordcon = document.getElementById('passwordcon');
+            if (this.checked) {
+                password.type = 'text';
+                passwordcon.type = 'text';
+            } else {
+                password.type = 'password';
+                passwordcon.type = 'password';
+            }
         });
     </script>
 </body>

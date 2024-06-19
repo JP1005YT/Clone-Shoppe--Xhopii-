@@ -142,6 +142,10 @@ footer .copyright div {
   padding: 20px;
 }
 
+footer nav a:hover, footer nav span:hover {
+  color: #ff4500;
+}
+
 @font-face {
   font-family: "Roboto";
   src: url("./../../font/Roboto/Roboto-Regular.ttf");
