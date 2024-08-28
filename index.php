@@ -1,6 +1,6 @@
-<?php
+<!-- <?php
     include_once('./processamento/funcoesBD.php');
-?>
+?> -->
 <!DOCTYPE html>
 <head>
     <meta charset='utf-8'>
@@ -9,21 +9,21 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="shortcut icon" href="./img/logo.png"/>
+    <link rel="shortcut icon" href="./view/img/logo.png"/>
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="./img/logo.png" height="50px">
+            <img src="./view/img/logo.png" height="50px">
             <h1>Xhopii</h1>
         </div>
         <div class="out-button">
             <?php
                 session_start();
                 if(isset($_SESSION['cliente'])){
-                    echo '<a href="./processamento/sair.php">Sair</a>';
+                    echo '<a href="./controller/pdo/sair.php">Sair</a>';
                 }else{
-                    echo '<a href="./pages/login/index.php">Entrar</a>';
+                    echo '<a href="./view/pages/login/index.php">Entrar</a>';
                 }
             ?>
         </div>
@@ -31,20 +31,20 @@
     <nav class="navbar">
         <ul>
             <li> <a href="index.php"> Home </a></li>
-            <li> <a href="./pages/cadcliente/index.php"> Cadastro Cliente </a> </li>
-            <li> <a href="./pages/cadfuncionario/index.php"> Cadastro Funcionário </a> </li>
-            <li> <a href="./pages/cadproduto/index.php"> Cadastro Produto </a> </li>
-            <li> <a href="./pages/cliente/index.php"> Ver Clientes </a> </li>
-            <li> <a href="./pages/funcionarios/index.php"> Ver Funcionários </a> </li>
-            <li> <a href="./pages/produtos/index.php"> Ver Produtos </a> </li>
+            <li> <a href="./view/pages/cadcliente/index.php"> Cadastro Cliente </a> </li>
+            <li> <a href="./view/pages/cadfuncionario/index.php"> Cadastro Funcionário </a> </li>
+            <li> <a href="./view/pages/cadproduto/index.php"> Cadastro Produto </a> </li>
+            <li> <a href="./view/pages/cliente/index.php"> Ver Clientes </a> </li>
+            <li> <a href="./view/pages/funcionarios/index.php"> Ver Funcionários </a> </li>
+            <li> <a href="./view/pages/produtos/index.php"> Ver Produtos </a> </li>
         </ul>
     </nav>
     <main>
         <div class="carrosel">
-            <img src="img/carousel-1.jpg" class="ativo" id="img0">
-            <img src="img/carousel-2.jpg" id="img1">
-            <img src="img/carousel-3.jpg" id="img2">
-            <img src="img/carousel-4.jpg" id="img3">
+            <img src="view/img/carousel-1.jpg" class="ativo" id="img0">
+            <img src="view/img/carousel-2.jpg" id="img1">
+            <img src="view/img/carousel-3.jpg" id="img2">
+            <img src="view/img/carousel-4.jpg" id="img3">
             <button class="backButton"> < </button>
             <button class="nextButton"> > </button>
             <nav>
@@ -57,7 +57,7 @@
             </nav>
         </div>
         <div class="promocao">
-            <img src="./img/home-promocao.png">
+            <img src="./view/img/home-promocao.png">
         </div>
         <section class="produtos">
             <span class="title">
