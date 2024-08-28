@@ -32,7 +32,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $stringParaOBanco = './../../img/produtos/'.$nomeAleatorio;
 
-        echo $localParaGuardar;
 
         move_uploaded_file($imagemParaGuardar['tmp_name'],$localParaGuardar); //comando que guarda o arquivo
         
