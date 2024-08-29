@@ -1,6 +1,9 @@
-<!-- <?php
-    include_once('./controller/Controller.php');
-?> -->
+<?php
+    include_once './controller/Controller.php';
+    include_once './view/global.php';
+
+    $controller = new Controller();
+?>
 <!DOCTYPE html>
 <head>
     <meta charset='utf-8'>
@@ -17,16 +20,7 @@
             <img src="./view/img/logo.png" height="50px">
             <h1>Xhopii</h1>
         </div>
-        <div class="out-button">
-            <?php
-                session_start();
-                if(isset($_SESSION['cliente'])){
-                    echo '<a href="./controller/pdo/sair.php">Sair</a>';
-                }else{
-                    echo '<a href="./view/pages/login/index.php">Entrar</a>';
-                }
-            ?>
-        </div>
+        <div class="out-button"><?php LoadHButton() ?></div>
     </header>
     <nav class="navbar">
         <ul>
@@ -65,8 +59,7 @@
             </span>
             <div class="content">
                 <?php
-                    $resp = retornarMaisBaratos();
-                
+                    $resp = $controller->obterProdutosBaratos();
                     while($row = $resp->fetch_assoc()){
                         echo '
                     <div id="'.$row['id'].'">

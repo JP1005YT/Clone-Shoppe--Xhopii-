@@ -1,8 +1,16 @@
 <?php
-class Controlador{
+
+include "./model/BD.php";
+
+class Controller{
+    
+    public $bd;
+
+    public function __construct(){
+        $this->bd = new BancoDeDados("localhost","root","","xhopii");
+    }
     public function obterProdutosBaratos(){
-        return "teste";
+        return $this->bd->retornarProdutos();
     }
 }
-
 ?>

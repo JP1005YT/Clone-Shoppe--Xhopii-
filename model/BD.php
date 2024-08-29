@@ -12,13 +12,13 @@ class BancoDeDados{
         $this->host = $host;
         $this->login = $login;
         $this->senha = $senha;
-        $this->database = $database;
+        $this->database = $database; 
     }
 
     //métodos
     public function conectarBD(){
-        $conexao = mysqli_connect($this->host, $this->login, $this->senha);
-        return($conexao);
+        $conexao = mysqli_connect($this->host, $this->login, $this->senha, $this->database);
+        return $conexao; 
     }
     public function inserirCliente($cpf, $nome, $sobrenome, $dataNasc, $telefone, $email, $senha){
     
@@ -56,7 +56,7 @@ class BancoDeDados{
     }
     
     function retornarProdutos(){
-        $conexao = conectarBD();
+        $conexao = $this->conectarBD();
         $consulta = "SELECT * FROM produto";
         $listaProdutos = mysqli_query($conexao,$consulta);
         return $listaProdutos;
