@@ -1,6 +1,5 @@
 <?php
-require_once "./../../processamento/funcoesBD.php";
-$funcionarios = retornarFuncionario();
+    include './../../global.php';
 ?>
 
 <!DOCTYPE html>

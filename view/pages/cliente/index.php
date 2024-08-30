@@ -1,6 +1,5 @@
 <?php
-require_once "./../../processamento/funcoesBD.php";
-$clientes = retornarCliente();
+    include './../../global.php';
 ?>
 
 <!DOCTYPE html>
@@ -31,33 +30,7 @@ $clientes = retornarCliente();
     </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="../../img/logo.png" height="50px" alt="Logo Xhoppi">
-            <h1>Xhopii</h1>
-        </div>
-        <div class="out-button">
-        <?php
-                session_start();
-                if(isset($_SESSION['cliente'])){
-                    echo '<a href="./../../processamento/sair.php">Sair</a>';
-                }else{
-                    echo '<a href="./../pages/login/index.php">Entrar</a>';
-                }
-            ?>
-        </div>
-    </header>
-    <nav class="navbar">
-        <ul>
-            <li> <a href="./../../index.php"> Home </a></li>
-            <li> <a href="./../../pages/cadcliente/"> Cadastro Cliente </a> </li>
-            <li> <a href="./../../pages/cadfuncionario/"> Cadastro Funcionário </a> </li>
-            <li> <a href="./../../pages/cadproduto/"> Cadastro Produto </a> </li>
-            <li> <a href="./../../pages/cliente/"> Ver Clientes </a> </li>
-            <li> <a href="./../../pages/funcionarios/"> Ver Funcionários </a> </li>
-            <li> <a href="./../../pages/produtos/"> Ver Produtos </a> </li>
-        </ul>
-    </nav>
+    <?php LoadHeader(false)?>
     <main>
         <h2>Clientes Cadastrados</h2>
         <table>

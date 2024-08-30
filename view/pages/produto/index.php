@@ -1,13 +1,5 @@
 <?php
-    include_once('./../../processamento/funcoesBD.php');
-            
-    $reposta = retornarProduto();
-
-    while($row = $reposta->fetch_assoc()){
-        if($row['id'] == $_GET['id']){
-            $produto = $row;
-        }
-    }
+    include './../../global.php';
 ?>
 
 <!DOCTYPE html>

@@ -1,3 +1,6 @@
+<?php
+    include './../../global.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>

@@ -1,6 +1,7 @@
 <?php
 
 include "./model/BD.php";
+include "./model/Produto.php";
 
 class Controller{
     
@@ -11,6 +12,14 @@ class Controller{
     }
     public function obterProdutosBaratos(){
         return $this->bd->retornarProdutos();
+    }
+
+    public function obterProdutos(){
+        return $this->bd->retornarProdutos();
+    }
+
+    public function inserirProduto($nome,$fabricante,$descricao,$valor,$quant,$imageSrc){
+        
     }
 }
 ?>
