@@ -1,8 +1,6 @@
-<?
-    include './../../../controller/Controller.php';
-    include './../../global.php';
-
-    $controller = new Controller() 
+<?php
+    // include './../../../controller/Controller.php';
+    include_once './../../global.php';
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">

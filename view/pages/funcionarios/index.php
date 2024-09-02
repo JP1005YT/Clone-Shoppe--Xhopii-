@@ -37,7 +37,6 @@
         </div>
         <div class="out-button">
         <?php
-                session_start();
                 if(isset($_SESSION['cliente'])){
                     echo '<a href="./../../processamento/sair.php">Sair</a>';
                 }else{

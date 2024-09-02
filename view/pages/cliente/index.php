@@ -1,5 +1,8 @@
 <?php
     include './../../global.php';
+    include './../../../controller/Controller.php';
+
+    $controller = new Controller();
 ?>
 
 <!DOCTYPE html>
@@ -45,95 +48,11 @@
                 </tr>
             </thead>
             <tbody>
-                <?php if (mysqli_num_rows($clientes) > 0) : ?>
-                    <?php while($cliente = mysqli_fetch_assoc($clientes)) : ?>
-                        <tr>
-                            <td><?php echo htmlspecialchars($cliente['nome']); ?></td>
-                            <td><?php echo htmlspecialchars($cliente['sobrenome']); ?></td>
-                            <td><?php echo htmlspecialchars($cliente['cpf']); ?></td>
-                            <td><?php echo htmlspecialchars($cliente['dataNascimento']); ?></td>
-                            <td><?php echo htmlspecialchars($cliente['telefone']); ?></td>
-                            <td><?php echo htmlspecialchars($cliente['email']); ?></td>
-                        </tr>
-                    <?php endwhile; ?>
-                <?php else : ?>
-                    <tr>
-                        <td colspan="6">Nenhum cliente cadastrado.</td>
-                    </tr>
-                <?php endif; ?>
+                <?php var_dump($controller->ObterClientes())?>
             </tbody>
         </table>
     </main>
-    <footer>
-        <section>
-            <nav>
-                <h2>ATENDIMENTO AO CLIENTE</h2>
-                <a href="#">Central de Ajuda</a>
-                <a href="#">Como Comprar</a>
-                <a href="#">Métodos de Pagamento</a>
-                <a href="#">Garantia Xhoppi</a>
-                <a href="#">Devolução e Reembolso</a>
-                <a href="#">Fale Conosco</a>
-                <a href="#">Ouvidoria</a>
-            </nav>
-            <nav>
-                <h2>SOBRE A XHOPPI</h2>
-                <a href="#">Sobre Nós</a>
-                <a href="#">Políticas Xhopii</a>
-                <a href="#">Política de Privacidade</a>
-                <a href="#">Programas de Filiados da Xhopii</a>
-                <a href="#">Seja um Entregador Xhoppi</a>
-                <a href="#">Ofertas Relâmpago</a>
-                <a href="#">Xhopii Blog</a>
-                <a href="#">Impresa</a>
-            </nav>
-            <nav class="imagens">
-                <h2>PAGAMENTO</h2>
-                <section>
-                    <img src="../../img/pix.png">
-                    <img src="../../img/boleto.png">
-                    <img src="../../img/americane.png">
-                    <img src="../../img/vsa.png">
-                    <img src="../../img/master.png">
-                    <img src="../../img/hper.png">
-                    <img src="../../img/elo.png">
-                </section>
-            </nav>
-            <nav>
-                <h2>SIGA-NOS</h2>
-                <div>
-                    <i class="bx bxl-instagram-alt"></i>
-                    <span>Instagram</span>
-                </div>
-                <div>
-                    <i class="bx bxl-twitter"></i>
-                    <span>Twitter</span>
-                </div>
-                <div>
-                    <i class="bx bxl-facebook-square"></i>
-                    <span>Facebook</span>
-                </div>
-                <div>
-                    <i class="bx bxl-youtube"></i>
-                    <span>Youtube</span>
-                </div>
-                <div>
-                    <i class="bx bxl-linkedin-square"></i>
-                    <span>LinkedIn</span>
-                </div>
-            </nav>
-            <nav class="qr-code">
-                <h2>ATENDIMENTO AO CLIENTE</h2>
-                <img src="../../img/qr-code.png" class="image-qr">
-                <img src="../../img/play.png">
-                <img src="../../img/appstore.png">
-            </nav>
-        </section>
-        <div class="copyright">
-            <hr>
-            <div>&copy 2024 Xhoppi. Todos Direitos Acadêmicos Reservados</div>
-        </div>
-    </footer>
+    <?php LoadFooter(false)?>
     <script>
                 document.querySelectorAll('.navbar ul li').forEach(function(li) {
             // Adicione um event listener de clique ao <li>
