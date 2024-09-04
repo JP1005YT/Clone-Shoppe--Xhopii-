@@ -69,4 +69,3 @@ class BancoDeDados{
         return $listaFuncionarios;
     }
 }
-?>

@@ -48,7 +48,18 @@
                 </tr>
             </thead>
             <tbody>
-                <?php var_dump($controller->ObterClientes())?>
+                <?php 
+                $clientes = $controller->ObterClientes();
+                foreach ($clientes as $cliente): ?>
+                    <tr>
+                        <td><?php echo htmlspecialchars($cliente['nome']); ?></td>
+                        <td><?php echo htmlspecialchars($cliente['sobrenome']); ?></td>
+                        <td><?php echo htmlspecialchars($cliente['cpf']); ?></td>
+                        <td><?php echo htmlspecialchars(date('d/m/Y', strtotime($cliente['dataNascimento']))); ?></td>
+                        <td><?php echo htmlspecialchars($cliente['telefone']); ?></td>
+                        <td><?php echo htmlspecialchars($cliente['email']); ?></td>
+                    </tr>
+                <?php endforeach; ?>
             </tbody>
         </table>
     </main>
