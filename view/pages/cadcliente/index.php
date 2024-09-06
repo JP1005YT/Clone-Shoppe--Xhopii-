@@ -15,7 +15,7 @@
 <body>
     <?php LoadHeader(false)?>
     <main>
-        <form method="POST" action="../../processamento/processamento_cliente.php">
+        <form method="POST" action="miniController.php">
             <h2>Cadastrar Cliente</h2>
                 <input type="text" placeholder="Nome" name="inputNome">
                 <input type="text" placeholder="Sobrenome" name="inputSobrenome">

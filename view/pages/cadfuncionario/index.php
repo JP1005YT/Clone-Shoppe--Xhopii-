@@ -15,7 +15,7 @@
 <body>
     <?php LoadHeader(false)?>
     <main>
-            <form method="POST" action="../../processamento/processamento_funcionario.php">
+            <form method="POST" action="miniController.php">
                 <h2>Cadastrar Funcionario</h2>
                     <input type="hidden" name="cadastroFuncionario">
                     <input type="text" placeholder="Nome" name="inputNome">

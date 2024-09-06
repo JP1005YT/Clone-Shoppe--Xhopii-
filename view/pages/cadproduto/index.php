@@ -1,5 +1,5 @@
 <?php
-    // include './../../../controller/Controller.php';
+    include './../../../controller/Controller.php';
     include_once './../../global.php';
 ?>
 <!DOCTYPE html>
@@ -16,7 +16,7 @@
 <body>
     <?php LoadHeader(false)?>
     <main>
-        <form method="POST" action="../../processamento/processamento_produto.php" enctype="multipart/form-data">
+        <form method="POST" action="miniController.php" enctype="multipart/form-data">
             <h2>Cadastrar Produto</h2>
                 <input type="text" placeholder="Nome" name="inputNome">
                 <input type="text" placeholder="Fabricante" name="inputFabricante">

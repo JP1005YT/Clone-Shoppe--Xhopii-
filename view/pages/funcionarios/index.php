@@ -3,6 +3,7 @@
     include './../../../controller/Controller.php';
 
     $controller = new Controller();
+
 ?>
 
 <!DOCTYPE html>
@@ -50,7 +51,10 @@
                 </tr>
             </thead>
             <tbody>
-                <?php if (mysqli_num_rows($funcionarios) > 0) : ?>
+                <?php 
+                    $funcionarios = $controller->ObterFuncionarios();
+                    if (mysqli_num_rows($funcionarios) > 0) : 
+                ?>
                     <?php while($funcionario = mysqli_fetch_assoc($funcionarios)) : ?>
                         <tr>
                             <td><?php echo htmlspecialchars($funcionario['nome']); ?></td>

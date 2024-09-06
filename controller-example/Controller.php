@@ -13,9 +13,6 @@ class Controlador{
         $this->BancoDeDados->inserirProduto($produto);
    }
 
-   
-
-
    public function obterProdutos(){
 
     $listaProdutos = $this->BancoDeDados->retornarProdutos();

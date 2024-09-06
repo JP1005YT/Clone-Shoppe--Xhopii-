@@ -33,17 +33,29 @@
         public function set_Fabricante($fabricante){
             $this->fabricante = $fabricante;
         }
-        public function getDescricao(){
+        public function get_Descricao(){
             return $this->descricao;
         }
-        public function setDescricao($descricao){
+        public function set_Descricao($descricao){
             $this->descricao = $descricao;
         }
-        public function getValor(){
+        public function get_Valor(){
             return $this->valor;
         }
-        public function setValor($valor){
+        public function set_Valor($valor){
             $this->valor = $valor;
+        }
+        public function get_Quant(){
+            return $this->quant;
+        }
+        public function set_Quant($quant){
+            $this->quant = $quant;
+        }
+        public function get_ImageSrc(){
+            return $this->imageSrc;
+        }
+        public function set_ImageSrc($imageSrc){
+            $this->imageSrc = $imageSrc;
         }
         //métodos
         public function aplicarCupom($cupomTaxa){

@@ -1,5 +1,6 @@
 <?php
-
+include_once ("Cliente.php");
+include_once ("Funcionario.php");
 class BancoDeDados{
 
     private $host;
@@ -20,30 +21,46 @@ class BancoDeDados{
         $conexao = mysqli_connect($this->host, $this->login, $this->senha, $this->database);
         return $conexao; 
     }
-    public function inserirCliente($cpf, $nome, $sobrenome, $dataNasc, $telefone, $email, $senha){
+    public function inserirCliente(Cliente $cliente){
     
         $conexao = $this->conectarBD();
         $consulta = "INSERT INTO cliente (cpf, nome, sobrenome, dataNascimento, telefone, email, senha) 
-                     VALUES ('$cpf','$nome','$sobrenome','$dataNasc','$telefone','$email','$senha')";
+                     VALUES ('" . $cliente->getCpf() . "',
+                    '" . $cliente->getNome() . "',
+                    '" . $cliente->getSobrenome() . "',
+                    '" . $cliente->getDataNasc() . "',
+                    '" . $cliente->getTelefone() . "',
+                    '" . $cliente->getEmail() . "',
+                    '" . $cliente->getSenha() . "')";
         mysqli_query($conexao,$consulta);
     }
 
-    public function inserirProduto($produto){
+    public function inserirProduto(Produto $produto){
     
         $conexao = $this->conectarBD();
-        $consulta = "INSERT INTO produto (nome, fabricante, descricao, valor) 
-                     VALUES ('$produto->get_Nome()',
-                     '$produto->get_Fabricante()',
-                     '$produto->get_Descricao()',
-                     '$produto->get_Valor()')";
+        $consulta = "INSERT INTO produto (nome, fabricante, descricao, valor, quantidade, imageSrc) 
+                     VALUES ('" . $produto->get_Nome() . "',
+                     '" . $produto->get_Fabricante() . "',
+                     '" . $produto->get_Descricao() . "',
+                     '" . $produto->get_Valor() . "',
+                     '" . $produto->get_Quant() . "',
+                     '" . $produto->get_ImageSrc() . "')";
         mysqli_query($conexao,$consulta);
     }
 
-    function inserirFuncionario($cpf, $nome, $sobrenome, $dataNasc, $telefone, $email, $salario){
+    function inserirFuncionario(Funcionario $funcionario){
     
         $conexao = $this->conectarBD();
-        $consulta = "INSERT INTO funcionario (cpf, nome, sobrenome, dataNascimento, telefone, email, salario) 
-                     VALUES ('$cpf','$nome','$sobrenome','$dataNasc','$telefone','$email','$salario')";
+        $consulta = "INSERT INTO funcionario (nome, sobrenome, cpf, dataDeNascimento, telefone, cargo, salario, email, senha) 
+                     VALUES ('" . $funcionario->getNome() . "',
+                     '" . $funcionario->getSobrenome() . "',
+                     '" . $funcionario->getCpf() . "',
+                     '" . $funcionario->getDataNasc() . "',
+                     '" . $funcionario->getTelefone() . "',
+                     '" . $funcionario->getCargo() . "',
+                     '" . $funcionario->getSalario() . "',
+                     '" . $funcionario->getEmail() . "',
+                     '" . $funcionario->getSenha() . "')";
         mysqli_query($conexao,$consulta);
     }
     

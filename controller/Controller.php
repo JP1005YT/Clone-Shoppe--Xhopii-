@@ -1,8 +1,9 @@
 <?php
 define('BASE_URL', '/xhopii');
 
-include __DIR__ . "./../model/BD.php";
-include __DIR__ . "./../model/Produto.php";
+include_once __DIR__ . "../../model/BD.php";
+include_once __DIR__ . "../../model/Produto.php";
+include_once __DIR__ . "../../model/Cliente.php";
 
 class Controller{
     
@@ -23,8 +24,21 @@ class Controller{
         return $this->bd->retornarClientes();
     }
 
+    public function ObterFuncionarios(){
+        return $this->bd->retornarFuncionarios();
+    }
+
     public function inserirProduto($nome,$fabricante,$descricao,$valor,$quant,$imageSrc){
-        
+        $produto = new Produto($nome,$fabricante,$descricao,$valor,$quant,$imageSrc);
+        $this->bd->inserirProduto($produto);
+    }
+    public function inserirCliente($cpf, $nome, $sobrenome, $dataNasc, $telefone, $email, $senha){
+        $cliente = new Cliente($cpf, $nome, $sobrenome, $dataNasc, $telefone, $email, $senha);
+        $this->bd->inserirCliente($cliente);
+    }
+    public function inserirFuncionario($nome, $sobrenome, $cpf, $dataNasc, $telefone, $cargo, $salario, $email, $senha){
+        $funcionario = new Funcionario($nome, $sobrenome, $cpf, $dataNasc, $telefone, $cargo, $salario, $email, $senha);
+        $this->bd->inserirFuncionario($funcionario);
     }
 }
 ?>
