@@ -17,7 +17,9 @@
                     <img src="./view/img/logo.png" height="50px">
                     <h1>Xhopii</h1>
                 </div>
-                <div class="out-button"></div>
+                <div class="out-button">';
+                LoadHButton(); // Chama a função para carregar o botão dinâmico de login/cadastro
+            echo '  </div>
             </header>
             <nav class="navbar">
                 <ul>
@@ -38,7 +40,9 @@
                     <img src="./../../../view/img/logo.png" height="50px">
                     <h1>Xhopii</h1>
                 </div>
-                <div class="out-button"></div>
+                 <div class="out-button">';
+                LoadHButton(); // Chama a função para carregar o botão dinâmico de login/cadastro
+            echo '  </div>
             </header>
             <nav class="navbar">
                 <ul>

@@ -79,7 +79,45 @@ main{
         text-align: center;
         margin-bottom: 20px;
     }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border: 1px solid $corPrincipal;
+    }
+    
+    th, td {
+        padding: 15px;
+        text-align: left;
+        border: 1px solid $corPrincipal;
+    }
+    
+    th {
+        background-color: $corPrincipal;
+        color: #fff;
+        font-weight: bold;
+    }
+    
+    td {
+        background-color: $brancoDiferente;
+        color: $corCinza;
+    }
+    
+    tr:nth-child(even) {
+        background-color: $corCinzClaro;
+    }
+    
+    tr:hover {
+        background-color: $corSecundario;
+        color: #fff;
+    }
+    
+    tbody tr td {
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
 }
+
 footer{
     background: $brancoDiferente;
     & > section{

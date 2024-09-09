@@ -118,7 +118,9 @@ main .DescProd section{
     width: 80%;
     height: 100%;
 }
-
+main:hover{
+    border: 2px solid #fb5630;;
+}
 @font-face {
     font-family: 'Roboto';
     src: url('../../font/Roboto/Roboto-Regular.ttf');

@@ -33,7 +33,7 @@
     </header>
     <main>
         <div class="shirts">
-            <img src="<?php echo $produto['imageSrc']?>" alt="Camiza" id="select">
+            <img src="<?php echo $produto['imageSrc']?>" alt="Camisa" id="select">
         </div>
         <div class="ProdImage">
             <img src="<?php echo $produto['imageSrc']?>" alt="<?php echo $produto['nome']?>" width="570px" height="600px">

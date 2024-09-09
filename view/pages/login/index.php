@@ -30,7 +30,7 @@
         </div>
     </header>
     <main>
-        <form method="POST" action="../../processamento/processamento.php">
+        <form method="POST" action="">
             <h2>Login</h2>
             <input type="text" placeholder="Email" name="inputEmail">
             <input type="password" placeholder="Senha" name="inputSenha" id="inputSenha">
