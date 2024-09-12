@@ -30,7 +30,7 @@
         </div>
     </header>
     <main>
-        <form method="POST" action="">
+        <form method="POST" action="miniController.php">
             <h2>Login</h2>
             <input type="text" placeholder="Email" name="inputEmail">
             <input type="password" placeholder="Senha" name="inputSenha" id="inputSenha">

@@ -1,12 +1,21 @@
 <?php
     session_start();
 
-    function LoadHButton(){
-        if(isset($_SESSION['cliente'])){
-            echo '<a href="./controller/pdo/sair.php">Sair</a>';
+    function LoadHButton($isIndex){
+        if($isIndex){
+            if(isset($_SESSION['cliente'])){
+                echo '<a href="./view/sair.php">Sair</a>';
+            }else{
+                echo '<a href="./view/pages/login/index.php">Entrar</a>';
+            }
         }else{
-            echo '<a href="./view/pages/login/index.php">Entrar</a>';
+            if(isset($_SESSION['cliente'])){
+                echo '<a href="./../../../view/sair.php">Sair</a>';
+            }else{
+                echo '<a href="./../../../view/pages/login/index.php">Entrar</a>';
+            }
         }
+
     }
 
     function LoadHeader($isIndex){
@@ -18,7 +27,7 @@
                     <h1>Xhopii</h1>
                 </div>
                 <div class="out-button">';
-                LoadHButton(); // Chama a função para carregar o botão dinâmico de login/cadastro
+                LoadHButton($isIndex); // Chama a função para carregar o botão dinâmico de login/cadastro
             echo '  </div>
             </header>
             <nav class="navbar">
@@ -41,7 +50,7 @@
                     <h1>Xhopii</h1>
                 </div>
                  <div class="out-button">';
-                LoadHButton(); // Chama a função para carregar o botão dinâmico de login/cadastro
+                LoadHButton($isIndex); // Chama a função para carregar o botão dinâmico de login/cadastro
             echo '  </div>
             </header>
             <nav class="navbar">
