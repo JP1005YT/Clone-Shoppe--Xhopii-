@@ -89,7 +89,7 @@
         const Divs = document.querySelectorAll(".content div")
         Divs.forEach(prod => {
             prod.addEventListener("click",()=>{
-                window.location.href = "./pages/produto?id=" + prod.id;
+                window.location.href = "./view/pages/produto?id=" + prod.id;
             })
         })
 
