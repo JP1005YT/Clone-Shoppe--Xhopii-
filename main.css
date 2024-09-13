@@ -129,6 +129,11 @@ main .carrosel button.backButton {
 main .carrosel button.nextButton {
   right: 100px;
 }
+main .carrosel button:hover {
+  font-size: 65px;
+  color: #fb7730;
+  transition: font-size 0.2s, color 0.2s ease-in-out;
+}
 
 .promocao {
   margin-top: 50px;
@@ -198,6 +203,11 @@ main .carrosel button.nextButton {
 .produtos .content div img {
   height: 200px;
 }
+.produtos .content div:hover {
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
 
 footer {
   background: #f5f5f5;
@@ -259,6 +269,16 @@ footer .copyright {
 }
 footer .copyright div {
   padding: 20px;
+}
+footer > section nav a:hover {
+  color: #fb7730;
+  text-decoration: underline;
+  transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+}
+footer .imagens section img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 @font-face {
